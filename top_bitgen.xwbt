@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/juliano/DASD2014/Tarea1/top.ncd
+OUTFILE=/home/juliano/DASD2014/Tarea1/top.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/juliano/DASD2014/Tarea1
+LICENSE=WebPack
+USER_INFO=210874283_0_0_079

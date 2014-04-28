@@ -1,0 +1,2205 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/media/juliano/A2586A51586A246F/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/trce
+-intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf
+-ucf main.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2450 paths analyzed, 71 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.340ns.
+--------------------------------------------------------------------------------
+
+Paths for end point scg/counter_1 (SLICE_X18Y8.SR), 136 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.504ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_8 (FF)
+  Destination:          scg/counter_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.110ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.351ns (0.100 - 0.451)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_8 to scg/counter_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y10.AQ      Tcko                  0.447   scg/counter<11>
+                                                       scg/counter_8
+    SLICE_X20Y10.A1      net (fanout=2)        0.643   scg/counter<8>
+    SLICE_X20Y10.DMUX    Topad                 0.550   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/counter<8>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.442   scg/counter<3>
+                                                       scg/counter_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.110ns (1.957ns logic, 2.153ns route)
+                                                       (47.6% logic, 52.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.520ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_9 (FF)
+  Destination:          scg/counter_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.094ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.351ns (0.100 - 0.451)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_9 to scg/counter_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y10.BQ      Tcko                  0.447   scg/counter<11>
+                                                       scg/counter_9
+    SLICE_X20Y10.B2      net (fanout=2)        0.640   scg/counter<9>
+    SLICE_X20Y10.DMUX    Topbd                 0.537   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/counter<9>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.442   scg/counter<3>
+                                                       scg/counter_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.094ns (1.944ns logic, 2.150ns route)
+                                                       (47.5% logic, 52.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.552ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_4 (FF)
+  Destination:          scg/counter_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.230ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.183ns (0.100 - 0.283)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_4 to scg/counter_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y9.AQ       Tcko                  0.447   scg/counter<7>
+                                                       scg/counter_4
+    SLICE_X20Y9.A1       net (fanout=2)        0.643   scg/counter<4>
+    SLICE_X20Y9.COUT     Topcya                0.395   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+                                                       scg/counter<4>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+    SLICE_X20Y10.DMUX    Tcind                 0.272   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.442   scg/counter<3>
+                                                       scg/counter_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.230ns (2.074ns logic, 2.156ns route)
+                                                       (49.0% logic, 51.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point scg/counter_3 (SLICE_X18Y8.SR), 136 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.507ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_8 (FF)
+  Destination:          scg/counter_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.107ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.351ns (0.100 - 0.451)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_8 to scg/counter_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y10.AQ      Tcko                  0.447   scg/counter<11>
+                                                       scg/counter_8
+    SLICE_X20Y10.A1      net (fanout=2)        0.643   scg/counter<8>
+    SLICE_X20Y10.DMUX    Topad                 0.550   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/counter<8>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.439   scg/counter<3>
+                                                       scg/counter_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.107ns (1.954ns logic, 2.153ns route)
+                                                       (47.6% logic, 52.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.523ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_9 (FF)
+  Destination:          scg/counter_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.091ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.351ns (0.100 - 0.451)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_9 to scg/counter_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y10.BQ      Tcko                  0.447   scg/counter<11>
+                                                       scg/counter_9
+    SLICE_X20Y10.B2      net (fanout=2)        0.640   scg/counter<9>
+    SLICE_X20Y10.DMUX    Topbd                 0.537   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/counter<9>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.439   scg/counter<3>
+                                                       scg/counter_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.091ns (1.941ns logic, 2.150ns route)
+                                                       (47.4% logic, 52.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.555ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_4 (FF)
+  Destination:          scg/counter_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.227ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.183ns (0.100 - 0.283)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_4 to scg/counter_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y9.AQ       Tcko                  0.447   scg/counter<7>
+                                                       scg/counter_4
+    SLICE_X20Y9.A1       net (fanout=2)        0.643   scg/counter<4>
+    SLICE_X20Y9.COUT     Topcya                0.395   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+                                                       scg/counter<4>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+    SLICE_X20Y10.DMUX    Tcind                 0.272   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.439   scg/counter<3>
+                                                       scg/counter_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.227ns (2.071ns logic, 2.156ns route)
+                                                       (49.0% logic, 51.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point scg/counter_2 (SLICE_X18Y8.SR), 136 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.515ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_8 (FF)
+  Destination:          scg/counter_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.099ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.351ns (0.100 - 0.451)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_8 to scg/counter_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y10.AQ      Tcko                  0.447   scg/counter<11>
+                                                       scg/counter_8
+    SLICE_X20Y10.A1      net (fanout=2)        0.643   scg/counter<8>
+    SLICE_X20Y10.DMUX    Topad                 0.550   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/counter<8>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.431   scg/counter<3>
+                                                       scg/counter_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.099ns (1.946ns logic, 2.153ns route)
+                                                       (47.5% logic, 52.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.531ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_9 (FF)
+  Destination:          scg/counter_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.083ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.351ns (0.100 - 0.451)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_9 to scg/counter_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y10.BQ      Tcko                  0.447   scg/counter<11>
+                                                       scg/counter_9
+    SLICE_X20Y10.B2      net (fanout=2)        0.640   scg/counter<9>
+    SLICE_X20Y10.DMUX    Topbd                 0.537   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/counter<9>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.431   scg/counter<3>
+                                                       scg/counter_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.083ns (1.933ns logic, 2.150ns route)
+                                                       (47.3% logic, 52.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.563ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scg/counter_4 (FF)
+  Destination:          scg/counter_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.219ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.183ns (0.100 - 0.283)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scg/counter_4 to scg/counter_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y9.AQ       Tcko                  0.447   scg/counter<7>
+                                                       scg/counter_4
+    SLICE_X20Y9.A1       net (fanout=2)        0.643   scg/counter<4>
+    SLICE_X20Y9.COUT     Topcya                0.395   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+                                                       scg/counter<4>_rt.1
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>
+    SLICE_X20Y10.DMUX    Tcind                 0.272   scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+                                                       scg/Madd_counter[15]_GND_73_o_add_1_OUT_cy<11>
+    SLICE_X21Y10.C2      net (fanout=1)        0.677   scg/counter[15]_GND_73_o_add_1_OUT<11>
+    SLICE_X21Y10.C       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv1
+    SLICE_X21Y10.B4      net (fanout=1)        0.327   scg/n0001_inv1
+    SLICE_X21Y10.B       Tilo                  0.259   btn_clock
+                                                       scg/n0001_inv3
+    SLICE_X18Y8.SR       net (fanout=5)        0.506   scg/n0001_inv
+    SLICE_X18Y8.CLK      Tsrck                 0.431   scg/counter<3>
+                                                       scg/counter_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.219ns (2.063ns logic, 2.156ns route)
+                                                       (48.9% logic, 51.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point scg/counter_12 (SLICE_X18Y11.CIN), 12 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.352ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_2 (FF)
+  Destination:          scg/counter_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.687ns (Levels of Logic = 4)
+  Clock Path Skew:      0.335ns (0.335 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_2 to scg/counter_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y8.CQ       Tcko                  0.234   scg/counter<3>
+                                                       scg/counter_2
+    SLICE_X18Y8.C5       net (fanout=2)        0.064   scg/counter<2>
+    SLICE_X18Y8.COUT     Topcyc                0.203   scg/counter<3>
+                                                       scg/counter<2>_rt
+                                                       scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.CIN      net (fanout=1)        0.001   scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.COUT     Tbyp                  0.032   scg/counter<7>
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.119   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_12
+    -------------------------------------------------  ---------------------------
+    Total                                      0.687ns (0.620ns logic, 0.067ns route)
+                                                       (90.2% logic, 9.8% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.413ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_1 (FF)
+  Destination:          scg/counter_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.748ns (Levels of Logic = 4)
+  Clock Path Skew:      0.335ns (0.335 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_1 to scg/counter_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y8.BQ       Tcko                  0.234   scg/counter<3>
+                                                       scg/counter_1
+    SLICE_X18Y8.B5       net (fanout=2)        0.064   scg/counter<1>
+    SLICE_X18Y8.COUT     Topcyb                0.264   scg/counter<3>
+                                                       scg/counter<1>_rt
+                                                       scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.CIN      net (fanout=1)        0.001   scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.COUT     Tbyp                  0.032   scg/counter<7>
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.119   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_12
+    -------------------------------------------------  ---------------------------
+    Total                                      0.748ns (0.681ns logic, 0.067ns route)
+                                                       (91.0% logic, 9.0% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.438ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_6 (FF)
+  Destination:          scg/counter_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.654ns (Levels of Logic = 3)
+  Clock Path Skew:      0.216ns (0.216 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_6 to scg/counter_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y9.CQ       Tcko                  0.234   scg/counter<7>
+                                                       scg/counter_6
+    SLICE_X18Y9.C5       net (fanout=2)        0.064   scg/counter<6>
+    SLICE_X18Y9.COUT     Topcyc                0.203   scg/counter<7>
+                                                       scg/counter<6>_rt
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.119   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_12
+    -------------------------------------------------  ---------------------------
+    Total                                      0.654ns (0.588ns logic, 0.066ns route)
+                                                       (89.9% logic, 10.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point scg/counter_14 (SLICE_X18Y11.CIN), 12 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.375ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_2 (FF)
+  Destination:          scg/counter_14 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.710ns (Levels of Logic = 4)
+  Clock Path Skew:      0.335ns (0.335 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_2 to scg/counter_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y8.CQ       Tcko                  0.234   scg/counter<3>
+                                                       scg/counter_2
+    SLICE_X18Y8.C5       net (fanout=2)        0.064   scg/counter<2>
+    SLICE_X18Y8.COUT     Topcyc                0.203   scg/counter<3>
+                                                       scg/counter<2>_rt
+                                                       scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.CIN      net (fanout=1)        0.001   scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.COUT     Tbyp                  0.032   scg/counter<7>
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.142   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.710ns (0.643ns logic, 0.067ns route)
+                                                       (90.6% logic, 9.4% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.436ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_1 (FF)
+  Destination:          scg/counter_14 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.771ns (Levels of Logic = 4)
+  Clock Path Skew:      0.335ns (0.335 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_1 to scg/counter_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y8.BQ       Tcko                  0.234   scg/counter<3>
+                                                       scg/counter_1
+    SLICE_X18Y8.B5       net (fanout=2)        0.064   scg/counter<1>
+    SLICE_X18Y8.COUT     Topcyb                0.264   scg/counter<3>
+                                                       scg/counter<1>_rt
+                                                       scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.CIN      net (fanout=1)        0.001   scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.COUT     Tbyp                  0.032   scg/counter<7>
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.142   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.771ns (0.704ns logic, 0.067ns route)
+                                                       (91.3% logic, 8.7% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.461ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_6 (FF)
+  Destination:          scg/counter_14 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.677ns (Levels of Logic = 3)
+  Clock Path Skew:      0.216ns (0.216 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_6 to scg/counter_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y9.CQ       Tcko                  0.234   scg/counter<7>
+                                                       scg/counter_6
+    SLICE_X18Y9.C5       net (fanout=2)        0.064   scg/counter<6>
+    SLICE_X18Y9.COUT     Topcyc                0.203   scg/counter<7>
+                                                       scg/counter<6>_rt
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.142   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.677ns (0.611ns logic, 0.066ns route)
+                                                       (90.3% logic, 9.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point scg/counter_13 (SLICE_X18Y11.CIN), 12 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.379ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_2 (FF)
+  Destination:          scg/counter_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.714ns (Levels of Logic = 4)
+  Clock Path Skew:      0.335ns (0.335 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_2 to scg/counter_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y8.CQ       Tcko                  0.234   scg/counter<3>
+                                                       scg/counter_2
+    SLICE_X18Y8.C5       net (fanout=2)        0.064   scg/counter<2>
+    SLICE_X18Y8.COUT     Topcyc                0.203   scg/counter<3>
+                                                       scg/counter<2>_rt
+                                                       scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.CIN      net (fanout=1)        0.001   scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.COUT     Tbyp                  0.032   scg/counter<7>
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.146   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.714ns (0.647ns logic, 0.067ns route)
+                                                       (90.6% logic, 9.4% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.440ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_1 (FF)
+  Destination:          scg/counter_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.775ns (Levels of Logic = 4)
+  Clock Path Skew:      0.335ns (0.335 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_1 to scg/counter_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y8.BQ       Tcko                  0.234   scg/counter<3>
+                                                       scg/counter_1
+    SLICE_X18Y8.B5       net (fanout=2)        0.064   scg/counter<1>
+    SLICE_X18Y8.COUT     Topcyb                0.264   scg/counter<3>
+                                                       scg/counter<1>_rt
+                                                       scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.CIN      net (fanout=1)        0.001   scg/Mcount_counter_cy<3>
+    SLICE_X18Y9.COUT     Tbyp                  0.032   scg/counter<7>
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.146   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.775ns (0.708ns logic, 0.067ns route)
+                                                       (91.4% logic, 8.6% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.465ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               scg/counter_6 (FF)
+  Destination:          scg/counter_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.681ns (Levels of Logic = 3)
+  Clock Path Skew:      0.216ns (0.216 - 0.000)
+  Source Clock:         global_clk rising at 10.000ns
+  Destination Clock:    global_clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: scg/counter_6 to scg/counter_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y9.CQ       Tcko                  0.234   scg/counter<7>
+                                                       scg/counter_6
+    SLICE_X18Y9.C5       net (fanout=2)        0.064   scg/counter<6>
+    SLICE_X18Y9.COUT     Topcyc                0.203   scg/counter<7>
+                                                       scg/counter<6>_rt
+                                                       scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<7>
+    SLICE_X18Y10.COUT    Tbyp                  0.032   scg/counter<11>
+                                                       scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CIN     net (fanout=1)        0.001   scg/Mcount_counter_cy<11>
+    SLICE_X18Y11.CLK     Tckcin      (-Th)    -0.146   scg/counter<15>
+                                                       scg/Mcount_counter_xor<15>
+                                                       scg/counter_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.681ns (0.615ns logic, 0.066ns route)
+                                                       (90.3% logic, 9.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 3.075ns (period - min period limit)
+  Period: 4.000ns
+  Min period limit: 0.925ns (1081.081MHz) (Tpllper_CLKOUT(Foutmax))
+  Physical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/PLL_ADV/CLKOUT0
+  Logical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/PLL_ADV/CLKOUT0
+  Location pin: PLL_ADV_X0Y0.CLKOUT0
+  Clock network: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pllclk0
+--------------------------------------------------------------------------------
+Slack: 4.660ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 2.670ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/dcm_clkgen_inst/CLKIN
+  Logical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/dcm_clkgen_inst/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: global_clk
+--------------------------------------------------------------------------------
+Slack: 4.660ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 2.670ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/dcm_clkgen_inst/CLKIN
+  Logical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/dcm_clkgen_inst/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: global_clk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx = 
+PERIOD TIMEGRP         
+"VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx"         
+TS_sys_clk_pin * 0.8 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2656 paths analyzed, 960 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.362ns.
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18 (SLICE_X29Y36.A5), 23 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.541ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.784ns (Levels of Logic = 4)
+  Clock Path Skew:      1.205ns (4.457 - 3.252)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 160.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 162.500ns
+  Clock Uncertainty:    0.380ns
+
+  Clock Uncertainty:          0.380ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.219ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_2 to VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y33.CQ      Tcko                  0.447   VLSI_HDMI_MEM_CURSO/vertical_pixel_pointer<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_2
+    SLICE_X24Y33.C6      net (fanout=5)        0.660   VLSI_HDMI_MEM_CURSO/vertical_pixel_pointer<2>
+    SLICE_X24Y33.COUT    Topcyc                0.295   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_lut<6>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+    SLICE_X24Y34.CIN     net (fanout=1)        0.003   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+    SLICE_X24Y34.COUT    Tbyp                  0.076   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+    SLICE_X24Y35.CIN     net (fanout=1)        0.003   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+    SLICE_X24Y35.BMUX    Tcinb                 0.260   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+    SLICE_X29Y36.A5      net (fanout=1)        0.813   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+    SLICE_X29Y36.CLK     Tas                   0.227   VLSI_HDMI_MEM_CURSO/external_ram_read_address<22>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmux_external_ram_read_address[22]_external_ram_read_address[22]_mux_14_OUT102
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18
+    -------------------------------------------------  ---------------------------
+    Total                                      2.784ns (1.305ns logic, 1.479ns route)
+                                                       (46.9% logic, 53.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.629ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_3 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.696ns (Levels of Logic = 4)
+  Clock Path Skew:      1.205ns (4.457 - 3.252)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 160.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 162.500ns
+  Clock Uncertainty:    0.380ns
+
+  Clock Uncertainty:          0.380ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.219ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_3 to VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y33.DQ      Tcko                  0.447   VLSI_HDMI_MEM_CURSO/vertical_pixel_pointer<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_3
+    SLICE_X24Y33.B6      net (fanout=5)        0.492   VLSI_HDMI_MEM_CURSO/vertical_pixel_pointer<3>
+    SLICE_X24Y33.COUT    Topcyb                0.375   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_lut<5>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+    SLICE_X24Y34.CIN     net (fanout=1)        0.003   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+    SLICE_X24Y34.COUT    Tbyp                  0.076   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+    SLICE_X24Y35.CIN     net (fanout=1)        0.003   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+    SLICE_X24Y35.BMUX    Tcinb                 0.260   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+    SLICE_X29Y36.A5      net (fanout=1)        0.813   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+    SLICE_X29Y36.CLK     Tas                   0.227   VLSI_HDMI_MEM_CURSO/external_ram_read_address<22>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmux_external_ram_read_address[22]_external_ram_read_address[22]_mux_14_OUT102
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18
+    -------------------------------------------------  ---------------------------
+    Total                                      2.696ns (1.385ns logic, 1.311ns route)
+                                                       (51.4% logic, 48.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.637ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_4 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.689ns (Levels of Logic = 4)
+  Clock Path Skew:      1.206ns (4.457 - 3.251)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 160.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 162.500ns
+  Clock Uncertainty:    0.380ns
+
+  Clock Uncertainty:          0.380ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.219ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_4 to VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y34.AQ      Tcko                  0.447   VLSI_HDMI_MEM_CURSO/vertical_pixel_pointer<7>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_4
+    SLICE_X24Y33.CX      net (fanout=5)        0.753   VLSI_HDMI_MEM_CURSO/vertical_pixel_pointer<4>
+    SLICE_X24Y33.COUT    Tcxcy                 0.107   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+    SLICE_X24Y34.CIN     net (fanout=1)        0.003   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<7>
+    SLICE_X24Y34.COUT    Tbyp                  0.076   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+    SLICE_X24Y35.CIN     net (fanout=1)        0.003   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<11>
+    SLICE_X24Y35.BMUX    Tcinb                 0.260   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+    SLICE_X29Y36.A5      net (fanout=1)        0.813   VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmult_PWR_52_o_v_line[8]_MuLt_2_OUT_Madd_cy<12>
+    SLICE_X29Y36.CLK     Tas                   0.227   VLSI_HDMI_MEM_CURSO/external_ram_read_address<22>
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/Mmux_external_ram_read_address[22]_external_ram_read_address[22]_mux_14_OUT102
+                                                       VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18
+    -------------------------------------------------  ---------------------------
+    Total                                      2.689ns (1.117ns logic, 1.572ns route)
+                                                       (41.5% logic, 58.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14 (SLICE_X32Y19.C2), 6 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.569ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.506ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.015ns (0.375 - 0.390)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 6.250ns
+  Clock Uncertainty:    0.160ns
+
+  Clock Uncertainty:          0.160ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT to VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y2.AQ        Tcko                  0.391   VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT
+    SLICE_X29Y23.C1      net (fanout=10)       3.111   VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT
+    SLICE_X29Y23.C       Tilo                  0.259   MemAdr_ext_8_OBUF
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT311
+    SLICE_X32Y19.C2      net (fanout=21)       1.404   VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT31
+    SLICE_X32Y19.CLK     Tas                   0.341   VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus<15>
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataToBus[15]_wide_mux_46_OUT61
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14
+    -------------------------------------------------  ---------------------------
+    Total                                      5.506ns (0.991ns logic, 4.515ns route)
+                                                       (18.0% logic, 82.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.102ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      3.241ns (Levels of Logic = 2)
+  Clock Path Skew:      0.003ns (0.285 - 0.282)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 6.250ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 18.750ns
+  Clock Uncertainty:    0.160ns
+
+  Clock Uncertainty:          0.160ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4 to VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y20.CQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4
+    SLICE_X29Y23.C2      net (fanout=28)       0.829   VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4
+    SLICE_X29Y23.C       Tilo                  0.259   MemAdr_ext_8_OBUF
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT311
+    SLICE_X32Y19.C2      net (fanout=21)       1.404   VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT31
+    SLICE_X32Y19.CLK     Tas                   0.341   VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus<15>
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataToBus[15]_wide_mux_46_OUT61
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14
+    -------------------------------------------------  ---------------------------
+    Total                                      3.241ns (1.008ns logic, 2.233ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.226ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      3.124ns (Levels of Logic = 2)
+  Clock Path Skew:      0.010ns (0.285 - 0.275)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 6.250ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 18.750ns
+  Clock Uncertainty:    0.160ns
+
+  Clock Uncertainty:          0.160ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5 to VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y20.CQ      Tcko                  0.447   VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5
+    SLICE_X29Y23.C5      net (fanout=27)       0.673   VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5
+    SLICE_X29Y23.C       Tilo                  0.259   MemAdr_ext_8_OBUF
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT311
+    SLICE_X32Y19.C2      net (fanout=21)       1.404   VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT31
+    SLICE_X32Y19.CLK     Tas                   0.341   VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus<15>
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataToBus[15]_wide_mux_46_OUT61
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14
+    -------------------------------------------------  ---------------------------
+    Total                                      3.124ns (1.047ns logic, 2.077ns route)
+                                                       (33.5% logic, 66.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12 (SLICE_X32Y19.A2), 6 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.577ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.498ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.015ns (0.375 - 0.390)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 6.250ns
+  Clock Uncertainty:    0.160ns
+
+  Clock Uncertainty:          0.160ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT to VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y2.AQ        Tcko                  0.391   VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT
+    SLICE_X29Y23.C1      net (fanout=10)       3.111   VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT
+    SLICE_X29Y23.C       Tilo                  0.259   MemAdr_ext_8_OBUF
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT311
+    SLICE_X32Y19.A2      net (fanout=21)       1.396   VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT31
+    SLICE_X32Y19.CLK     Tas                   0.341   VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus<15>
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataToBus[15]_wide_mux_46_OUT41
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12
+    -------------------------------------------------  ---------------------------
+    Total                                      5.498ns (0.991ns logic, 4.507ns route)
+                                                       (18.0% logic, 82.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.110ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      3.233ns (Levels of Logic = 2)
+  Clock Path Skew:      0.003ns (0.285 - 0.282)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 6.250ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 18.750ns
+  Clock Uncertainty:    0.160ns
+
+  Clock Uncertainty:          0.160ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4 to VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y20.CQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4
+    SLICE_X29Y23.C2      net (fanout=28)       0.829   VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4
+    SLICE_X29Y23.C       Tilo                  0.259   MemAdr_ext_8_OBUF
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT311
+    SLICE_X32Y19.A2      net (fanout=21)       1.396   VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT31
+    SLICE_X32Y19.CLK     Tas                   0.341   VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus<15>
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataToBus[15]_wide_mux_46_OUT41
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12
+    -------------------------------------------------  ---------------------------
+    Total                                      3.233ns (1.008ns logic, 2.225ns route)
+                                                       (31.2% logic, 68.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.234ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      3.116ns (Levels of Logic = 2)
+  Clock Path Skew:      0.010ns (0.285 - 0.275)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 6.250ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK falling at 18.750ns
+  Clock Uncertainty:    0.160ns
+
+  Clock Uncertainty:          0.160ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.250ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5 to VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y20.CQ      Tcko                  0.447   VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5
+    SLICE_X29Y23.C5      net (fanout=27)       0.673   VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5
+    SLICE_X29Y23.C       Tilo                  0.259   MemAdr_ext_8_OBUF
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT311
+    SLICE_X32Y19.A2      net (fanout=21)       1.396   VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataCounter[7]_wide_mux_42_OUT31
+    SLICE_X32Y19.CLK     Tas                   0.341   VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus<15>
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/Mmux_Estados1[4]_DataToBus[15]_wide_mux_46_OUT41
+                                                       VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12
+    -------------------------------------------------  ---------------------------
+    Total                                      3.116ns (1.047ns logic, 2.069ns route)
+                                                       (33.6% logic, 66.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx"
+        TS_sys_clk_pin * 0.8 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0 (SLICE_X31Y60.SR), 7 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.414ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.414ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1 to VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y60.AQ      Tcko                  0.198   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1
+    SLICE_X30Y60.B6      net (fanout=3)        0.029   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<1>
+    SLICE_X30Y60.B       Tilo                  0.156   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ctrl_to_I2Cbus<12>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n01501
+    SLICE_X31Y60.SR      net (fanout=2)        0.163   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n0150
+    SLICE_X31Y60.CLK     Tcksr       (-Th)     0.132   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.414ns (0.222ns logic, 0.192ns route)
+                                                       (53.6% logic, 46.4% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.678ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.678ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0 to VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y60.CMUX    Tshcko                0.244   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0
+    SLICE_X30Y60.B2      net (fanout=4)        0.247   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<0>
+    SLICE_X30Y60.B       Tilo                  0.156   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ctrl_to_I2Cbus<12>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n01501
+    SLICE_X31Y60.SR      net (fanout=2)        0.163   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n0150
+    SLICE_X31Y60.CLK     Tcksr       (-Th)     0.132   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.678ns (0.268ns logic, 0.410ns route)
+                                                       (39.5% logic, 60.5% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.724ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg_1 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.723ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.001ns (0.116 - 0.117)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg_1 to VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y61.DQ      Tcko                  0.198   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg<1>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg_1
+    SLICE_X30Y60.B3      net (fanout=23)       0.338   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg<1>
+    SLICE_X30Y60.B       Tilo                  0.156   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ctrl_to_I2Cbus<12>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n01501
+    SLICE_X31Y60.SR      net (fanout=2)        0.163   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n0150
+    SLICE_X31Y60.CLK     Tcksr       (-Th)     0.132   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.723ns (0.222ns logic, 0.501ns route)
+                                                       (30.7% logic, 69.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1 (SLICE_X24Y60.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.415ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.415ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1 to VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y60.DQ      Tcko                  0.200   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1
+    SLICE_X24Y60.D6      net (fanout=24)       0.025   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1
+    SLICE_X24Y60.CLK     Tah         (-Th)    -0.190   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1-In1
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.415ns (0.390ns logic, 0.025ns route)
+                                                       (94.0% logic, 6.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1 (SLICE_X31Y60.SR), 7 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.415ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.415ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1 to VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y60.AQ      Tcko                  0.198   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1
+    SLICE_X30Y60.B6      net (fanout=3)        0.029   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<1>
+    SLICE_X30Y60.B       Tilo                  0.156   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ctrl_to_I2Cbus<12>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n01501
+    SLICE_X31Y60.SR      net (fanout=2)        0.163   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n0150
+    SLICE_X31Y60.CLK     Tcksr       (-Th)     0.131   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.415ns (0.223ns logic, 0.192ns route)
+                                                       (53.7% logic, 46.3% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.679ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.679ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0 to VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y60.CMUX    Tshcko                0.244   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0
+    SLICE_X30Y60.B2      net (fanout=4)        0.247   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<0>
+    SLICE_X30Y60.B       Tilo                  0.156   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ctrl_to_I2Cbus<12>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n01501
+    SLICE_X31Y60.SR      net (fanout=2)        0.163   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n0150
+    SLICE_X31Y60.CLK     Tcksr       (-Th)     0.131   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.679ns (0.269ns logic, 0.410ns route)
+                                                       (39.6% logic, 60.4% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.725ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg_1 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.724ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.001ns (0.116 - 0.117)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg_1 to VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y61.DQ      Tcko                  0.198   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg<1>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg_1
+    SLICE_X30Y60.B3      net (fanout=23)       0.338   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg<1>
+    SLICE_X30Y60.B       Tilo                  0.156   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ctrl_to_I2Cbus<12>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n01501
+    SLICE_X31Y60.SR      net (fanout=2)        0.163   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/_n0150
+    SLICE_X31Y60.CLK     Tcksr       (-Th)     0.131   VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter<2>
+                                                       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.724ns (0.223ns logic, 0.501ns route)
+                                                       (30.8% logic, 69.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx"
+        TS_sys_clk_pin * 0.8 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 9.376ns (period - min period limit)
+  Period: 12.500ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: VLSI_HDMI_MEM_CURSO/mem_video/Mram_line_buffer/CLKB
+  Logical resource: VLSI_HDMI_MEM_CURSO/mem_video/Mram_line_buffer/CLKB
+  Location pin: RAMB16_X1Y14.CLKB
+  Clock network: VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK
+--------------------------------------------------------------------------------
+Slack: 9.376ns (period - min period limit)
+  Period: 12.500ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ROM_8x256__1/Mram_EDID_ROM/CLKAWRCLK
+  Logical resource: VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ROM_8x256__1/Mram_EDID_ROM/CLKAWRCLK
+  Location pin: RAMB8_X1Y29.CLKAWRCLK
+  Clock network: VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK
+--------------------------------------------------------------------------------
+Slack: 9.376ns (period - min period limit)
+  Period: 12.500ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: VLSI_HDMI_MEM_CURSO/Mram_LineBuffer/CLKA
+  Logical resource: VLSI_HDMI_MEM_CURSO/Mram_LineBuffer/CLKA
+  Location pin: RAMB16_X1Y10.CLKA
+  Clock network: VLSI_HDMI_MEM_CURSO/EXTERNAL_RAM_INTERNAL_CLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1 
+= PERIOD TIMEGRP         
+"VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1"         
+TS_sys_clk_pin * 0.25 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3756 paths analyzed, 923 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.131ns.
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (SLICE_X4Y29.B2), 68 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     33.869ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      6.034ns (Levels of Logic = 5)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X6Y29.D1       net (fanout=12)       2.005   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X6Y29.D        Tilo                  0.203   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<4>11
+    SLICE_X6Y29.C4       net (fanout=4)        0.445   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<4>
+    SLICE_X6Y29.CMUX     Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<7>11
+    SLICE_X7Y29.B1       net (fanout=6)        0.463   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<7>
+    SLICE_X7Y29.B        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>11
+    SLICE_X7Y29.C1       net (fanout=4)        0.596   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>1
+    SLICE_X7Y29.CMUX     Tilo                  0.313   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>12
+    SLICE_X4Y29.B2       net (fanout=1)        0.740   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>11
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>14
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    -------------------------------------------------  ---------------------------
+    Total                                      6.034ns (1.785ns logic, 4.249ns route)
+                                                       (29.6% logic, 70.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     33.961ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.942ns (Levels of Logic = 5)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X6Y29.D1       net (fanout=12)       2.005   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X6Y29.D        Tilo                  0.203   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<4>11
+    SLICE_X6Y29.C4       net (fanout=4)        0.445   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<4>
+    SLICE_X6Y29.CMUX     Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<7>11
+    SLICE_X7Y29.D2       net (fanout=6)        0.636   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<7>
+    SLICE_X7Y29.D        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>11
+    SLICE_X7Y29.C5       net (fanout=1)        0.331   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+    SLICE_X7Y29.CMUX     Tilo                  0.313   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>12
+    SLICE_X4Y29.B2       net (fanout=1)        0.740   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>11
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>14
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.942ns (1.785ns logic, 4.157ns route)
+                                                       (30.0% logic, 70.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     34.137ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.766ns (Levels of Logic = 5)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X6Y29.D1       net (fanout=12)       2.005   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X6Y29.D        Tilo                  0.203   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<4>11
+    SLICE_X6Y29.C4       net (fanout=4)        0.445   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<4>
+    SLICE_X6Y29.CMUX     Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<7>11
+    SLICE_X7Y30.B6       net (fanout=6)        0.322   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<7>
+    SLICE_X7Y30.B        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n1q_m<2>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd91
+    SLICE_X7Y29.C4       net (fanout=3)        0.469   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9
+    SLICE_X7Y29.CMUX     Tilo                  0.313   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>12
+    SLICE_X4Y29.B2       net (fanout=1)        0.740   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>11
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>14
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.766ns (1.785ns logic, 3.981ns route)
+                                                       (31.0% logic, 69.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (SLICE_X4Y29.B3), 50 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     34.146ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.757ns (Levels of Logic = 5)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X6Y29.D1       net (fanout=12)       2.005   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X6Y29.D        Tilo                  0.203   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<4>11
+    SLICE_X6Y29.C4       net (fanout=4)        0.445   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<4>
+    SLICE_X6Y29.CMUX     Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<7>11
+    SLICE_X7Y29.B1       net (fanout=6)        0.463   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<7>
+    SLICE_X7Y29.B        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>11
+    SLICE_X7Y29.C1       net (fanout=4)        0.596   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>1
+    SLICE_X7Y29.C        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>161
+    SLICE_X4Y29.B3       net (fanout=2)        0.517   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>16
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>14
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.757ns (1.731ns logic, 4.026ns route)
+                                                       (30.1% logic, 69.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     34.414ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.489ns (Levels of Logic = 5)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X6Y29.D1       net (fanout=12)       2.005   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X6Y29.D        Tilo                  0.203   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<4>11
+    SLICE_X6Y29.C4       net (fanout=4)        0.445   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<4>
+    SLICE_X6Y29.CMUX     Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<7>11
+    SLICE_X7Y30.B6       net (fanout=6)        0.322   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<7>
+    SLICE_X7Y30.B        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n1q_m<2>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd91
+    SLICE_X7Y29.C4       net (fanout=3)        0.469   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9
+    SLICE_X7Y29.C        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>161
+    SLICE_X4Y29.B3       net (fanout=2)        0.517   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>16
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>14
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.489ns (1.731ns logic, 3.758ns route)
+                                                       (31.5% logic, 68.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     34.444ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.459ns (Levels of Logic = 4)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X7Y31.C1       net (fanout=12)       2.297   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X7Y31.C        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<3>11
+    SLICE_X7Y29.B4       net (fanout=2)        0.523   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<3>
+    SLICE_X7Y29.B        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>11
+    SLICE_X7Y29.C1       net (fanout=4)        0.596   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>1
+    SLICE_X7Y29.C        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>161
+    SLICE_X4Y29.B3       net (fanout=2)        0.517   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>16
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>14
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.459ns (1.526ns logic, 3.933ns route)
+                                                       (28.0% logic, 72.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3 (SLICE_X4Y29.C1), 66 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     34.219ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.684ns (Levels of Logic = 5)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X6Y29.D1       net (fanout=12)       2.005   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X6Y29.D        Tilo                  0.203   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<4>11
+    SLICE_X6Y29.C4       net (fanout=4)        0.445   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<4>
+    SLICE_X6Y29.CMUX     Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<7>11
+    SLICE_X7Y29.B1       net (fanout=6)        0.463   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<7>
+    SLICE_X7Y29.B        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>11
+    SLICE_X4Y29.A1       net (fanout=4)        0.647   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>1
+    SLICE_X4Y29.A        Tilo                  0.205   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1411
+    SLICE_X4Y29.C1       net (fanout=2)        0.447   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_cy<0>2
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<3>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.684ns (1.677ns logic, 4.007ns route)
+                                                       (29.5% logic, 70.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     34.517ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.386ns (Levels of Logic = 4)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X7Y31.C1       net (fanout=12)       2.297   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X7Y31.C        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<3>11
+    SLICE_X7Y29.B4       net (fanout=2)        0.523   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<3>
+    SLICE_X7Y29.B        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>11
+    SLICE_X4Y29.A1       net (fanout=4)        0.647   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_lut<0>1
+    SLICE_X4Y29.A        Tilo                  0.205   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1411
+    SLICE_X4Y29.C1       net (fanout=2)        0.447   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_cy<0>2
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<3>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.386ns (1.472ns logic, 3.914ns route)
+                                                       (27.3% logic, 72.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     34.558ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      5.345ns (Levels of Logic = 4)
+  Clock Path Skew:      0.024ns (0.371 - 0.347)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.121ns
+
+  Clock Uncertainty:          0.121ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.230ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y23.AQ      Tcko                  0.408   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<5>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2
+    SLICE_X6Y29.B2       net (fanout=12)       2.089   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q<2>
+    SLICE_X6Y29.BMUX     Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg<4>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mmux_q_m<5>11
+    SLICE_X7Y28.A6       net (fanout=5)        0.558   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m<5>
+    SLICE_X7Y28.A        Tilo                  0.259   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/N4
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<3>1_SW0
+    SLICE_X4Y29.A2       net (fanout=2)        0.777   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/N4
+    SLICE_X4Y29.A        Tilo                  0.205   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>1411
+    SLICE_X4Y29.C1       net (fanout=2)        0.447   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/ADDERTREE_INTERNAL_Madd9_cy<0>2
+    SLICE_X4Y29.CLK      Tas                   0.341   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<3>1
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.345ns (1.474ns logic, 3.871ns route)
+                                                       (27.6% logic, 72.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1 = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1"
+        TS_sys_clk_pin * 0.25 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[10].i_RAM16X1D_U/DP (SLICE_X10Y38.AI), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.214ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_0 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[10].i_RAM16X1D_U/DP (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.216ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.033 - 0.031)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_0 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[10].i_RAM16X1D_U/DP
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y38.AQ      Tcko                  0.198   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/red<6>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_0
+    SLICE_X10Y38.AI      net (fanout=2)        0.022   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/red<0>
+    SLICE_X10Y38.CLK     Tdh         (-Th)     0.004   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<8>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[10].i_RAM16X1D_U/DP
+    -------------------------------------------------  ---------------------------
+    Total                                      0.216ns (0.194ns logic, 0.022ns route)
+                                                       (89.8% logic, 10.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[11].i_RAM16X1D_U/SP (SLICE_X10Y38.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.265ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_1 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[11].i_RAM16X1D_U/SP (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.267ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.033 - 0.031)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_1 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[11].i_RAM16X1D_U/SP
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y38.AMUX    Tshcko                0.244   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/red<6>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_1
+    SLICE_X10Y38.CX      net (fanout=2)        0.121   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/red<1>
+    SLICE_X10Y38.CLK     Tdh         (-Th)     0.098   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<8>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[11].i_RAM16X1D_U/SP
+    -------------------------------------------------  ---------------------------
+    Total                                      0.267ns (0.146ns logic, 0.121ns route)
+                                                       (54.7% logic, 45.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[23].i_RAM16X1D_U/DP (SLICE_X6Y36.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.313ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_8 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[23].i_RAM16X1D_U/DP (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.311ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.002ns (0.039 - 0.041)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_8 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[23].i_RAM16X1D_U/DP
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y34.BQ       Tcko                  0.198   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/green<9>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_8
+    SLICE_X6Y36.AX       net (fanout=2)        0.233   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/green<8>
+    SLICE_X6Y36.CLK      Tdh         (-Th)     0.120   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<20>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[23].i_RAM16X1D_U/DP
+    -------------------------------------------------  ---------------------------
+    Total                                      0.311ns (0.078ns logic, 0.233ns route)
+                                                       (25.1% logic, 74.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1 = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1"
+        TS_sys_clk_pin * 0.25 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 36.876ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: VLSI_HDMI_MEM_CURSO/Mram_LineBuffer/CLKB
+  Logical resource: VLSI_HDMI_MEM_CURSO/Mram_LineBuffer/CLKB
+  Location pin: RAMB16_X1Y10.CLKB
+  Clock network: VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz
+--------------------------------------------------------------------------------
+Slack: 38.270ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pclkbufg1x/I0
+  Logical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pclkbufg1x/I0
+  Location pin: BUFGMUX_X2Y1.I0
+  Clock network: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pllclk1
+--------------------------------------------------------------------------------
+Slack: 38.962ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.038ns (963.391MHz) (Tcp)
+  Physical resource: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<0>/CLK
+  Logical resource: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[3].i_RAM16X1D_U/DP/CLK
+  Location pin: SLICE_X6Y32.CLK
+  Clock network: VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_25MHz
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk0 
+= PERIOD TIMEGRP         
+"VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk0"         
+TS_sys_clk_pin * 2.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2 
+= PERIOD TIMEGRP         
+"VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2"         
+TS_sys_clk_pin * 0.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 269 paths analyzed, 149 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.594ns.
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17 (SLICE_X8Y38.BX), 5 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     16.406ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra0 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.462ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.025ns (0.256 - 0.281)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Clock Uncertainty:    0.107ns
+
+  Clock Uncertainty:          0.107ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.202ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra0 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y39.BQ       Tcko                  0.447   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/ra<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra0
+    SLICE_X10Y32.B2      net (fanout=19)       1.601   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/ra<0>
+    SLICE_X10Y32.BMUX    Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<16>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[17].i_RAM16X1D_U/DP
+    SLICE_X8Y38.BX       net (fanout=1)        1.017   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<17>
+    SLICE_X8Y38.CLK      Tdick                 0.136   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/db<19>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17
+    -------------------------------------------------  ---------------------------
+    Total                                      3.462ns (0.844ns logic, 2.618ns route)
+                                                       (24.4% logic, 75.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.420ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra2 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.448ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.025ns (0.256 - 0.281)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Clock Uncertainty:    0.107ns
+
+  Clock Uncertainty:          0.107ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.202ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra2 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y39.DMUX     Tshcko                0.488   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/ra<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra2
+    SLICE_X10Y32.B4      net (fanout=17)       1.546   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/ra<2>
+    SLICE_X10Y32.BMUX    Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<16>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[17].i_RAM16X1D_U/DP
+    SLICE_X8Y38.BX       net (fanout=1)        1.017   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<17>
+    SLICE_X8Y38.CLK      Tdick                 0.136   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/db<19>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17
+    -------------------------------------------------  ---------------------------
+    Total                                      3.448ns (0.885ns logic, 2.563ns route)
+                                                       (25.7% logic, 74.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.546ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra1 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.322ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.025ns (0.256 - 0.281)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Clock Uncertainty:    0.107ns
+
+  Clock Uncertainty:          0.107ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.202ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra1 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y39.CQ       Tcko                  0.447   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/ra<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra1
+    SLICE_X10Y32.B3      net (fanout=18)       1.461   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/ra<1>
+    SLICE_X10Y32.BMUX    Tilo                  0.261   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<16>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[17].i_RAM16X1D_U/DP
+    SLICE_X8Y38.BX       net (fanout=1)        1.017   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/dataint<17>
+    SLICE_X8Y38.CLK      Tdick                 0.136   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/db<19>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17
+    -------------------------------------------------  ---------------------------
+    Total                                      3.322ns (0.844ns logic, 2.478ns route)
+                                                       (25.4% logic, 74.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s (OLOGIC_X9Y62.D3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     16.469ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.421ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.003ns (0.168 - 0.171)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Clock Uncertainty:    0.107ns
+
+  Clock Uncertainty:          0.107ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.202ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y61.DMUX    Tshcko                0.461   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/toggle
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0
+    OLOGIC_X9Y62.D3      net (fanout=5)        2.993   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint<0>
+    OLOGIC_X9Y62.CLKDIV  Tosdck_D             -0.033   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s
+    -------------------------------------------------  ---------------------------
+    Total                                      3.421ns (0.428ns logic, 2.993ns route)
+                                                       (12.5% logic, 87.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m (OLOGIC_X9Y63.D1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     16.548ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0 (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.342ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.003ns (0.168 - 0.171)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 0.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Clock Uncertainty:    0.107ns
+
+  Clock Uncertainty:          0.107ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.202ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y61.DMUX    Tshcko                0.461   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/toggle
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0
+    OLOGIC_X9Y63.D1      net (fanout=5)        2.905   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint<0>
+    OLOGIC_X9Y63.CLKDIV  Tosdck_D             -0.024   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m
+    -------------------------------------------------  ---------------------------
+    Total                                      3.342ns (0.437ns logic, 2.905ns route)
+                                                       (13.1% logic, 86.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2 = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2"
+        TS_sys_clk_pin * 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db3 (SLICE_X6Y38.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.228ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.232ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.033 - 0.029)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.198   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen
+    SLICE_X6Y38.CE       net (fanout=18)       0.142   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync
+    SLICE_X6Y38.CLK      Tckce       (-Th)     0.108   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/db<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.232ns (0.090ns logic, 0.142ns route)
+                                                       (38.8% logic, 61.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db2 (SLICE_X6Y38.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.232ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.236ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.033 - 0.029)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.198   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen
+    SLICE_X6Y38.CE       net (fanout=18)       0.142   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync
+    SLICE_X6Y38.CLK      Tckce       (-Th)     0.104   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/db<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.236ns (0.094ns logic, 0.142ns route)
+                                                       (39.8% logic, 60.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db1 (SLICE_X6Y38.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.234ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen (FF)
+  Destination:          VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.238ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.033 - 0.029)
+  Source Clock:         VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Destination Clock:    VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y39.AQ       Tcko                  0.198   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen
+    SLICE_X6Y38.CE       net (fanout=18)       0.142   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync
+    SLICE_X6Y38.CLK      Tckce       (-Th)     0.102   VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/db<3>
+                                                       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.238ns (0.096ns logic, 0.142ns route)
+                                                       (40.3% logic, 59.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2 = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2"
+        TS_sys_clk_pin * 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.270ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pclkbufg2x/I0
+  Logical resource: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pclkbufg2x/I0
+  Location pin: BUFGMUX_X2Y4.I0
+  Clock network: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pllclk2
+--------------------------------------------------------------------------------
+Slack: 19.570ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/db<19>/CLK
+  Logical resource: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db16/CK
+  Location pin: SLICE_X8Y38.CLK
+  Clock network: VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz
+--------------------------------------------------------------------------------
+Slack: 19.570ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/db<19>/CLK
+  Logical resource: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17/CK
+  Location pin: SLICE_X8Y38.CLK
+  Clock network: VLSI_HDMI_MEM_CURSO/HDMI_Pixel_Clock_50MHz
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      5.340ns|      9.090ns|            0|            0|         2450|         6681|
+| TS_VLSI_HDMI_MEM_CURSO_HDMI_AN|     12.500ns|     11.362ns|          N/A|            0|            0|         2656|            0|
+| D_MEMORY_CLOCK_MANAGER_clkfx  |             |             |             |             |             |             |             |
+| TS_VLSI_HDMI_MEM_CURSO_HDMI_AN|     40.000ns|      6.131ns|          N/A|            0|            0|         3756|            0|
+| D_MEMORY_CLOCK_MANAGER_pllclk1|             |             |             |             |             |             |             |
+| TS_VLSI_HDMI_MEM_CURSO_HDMI_AN|      4.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| D_MEMORY_CLOCK_MANAGER_pllclk0|             |             |             |             |             |             |             |
+| TS_VLSI_HDMI_MEM_CURSO_HDMI_AN|     20.000ns|      3.594ns|          N/A|            0|            0|          269|            0|
+| D_MEMORY_CLOCK_MANAGER_pllclk2|             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.131|    2.556|    5.681|    4.106|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 9131 paths, 0 nets, and 2643 connections
+
+Design statistics:
+   Minimum period:  11.362ns{1}   (Maximum frequency:  88.013MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Apr 28 15:24:41 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 152 MB
+
+
+

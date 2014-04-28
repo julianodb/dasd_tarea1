@@ -1,0 +1,866 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Apr 28 15:24:10 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "LB" LOCATE = SITE "K16" LEVEL 1;
+COMP "UB" LOCATE = SITE "K15" LEVEL 1;
+COMP "TMDS_IN<3>" LOCATE = SITE "C10" LEVEL 1;
+COMP "TMDS_INB<3>" LOCATE = SITE "A10" LEVEL 1;
+COMP "btn" LOCATE = SITE "B8" LEVEL 1;
+COMP "MemWait" LOCATE = SITE "V4" LEVEL 1;
+COMP "EDID_IN_SDA" LOCATE = SITE "A12" LEVEL 1;
+COMP "TMDS_OUTB<0>" LOCATE = SITE "A5" LEVEL 1;
+COMP "TMDS_OUTB<1>" LOCATE = SITE "A6" LEVEL 1;
+COMP "TMDS_OUTB<2>" LOCATE = SITE "A7" LEVEL 1;
+COMP "TMDS_OUTB<3>" LOCATE = SITE "C11" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "EDID_IN_SCL" LOCATE = SITE "B12" LEVEL 1;
+COMP "TMDS_IN<0>" LOCATE = SITE "D8" LEVEL 1;
+COMP "CE_out" LOCATE = SITE "L15" LEVEL 1;
+COMP "OE_out" LOCATE = SITE "L18" LEVEL 1;
+COMP "Led<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "Led<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "Led<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "WE_out" LOCATE = SITE "M16" LEVEL 1;
+COMP "TMDS_INB<1>" LOCATE = SITE "A9" LEVEL 1;
+COMP "TMDS_INB<0>" LOCATE = SITE "C8" LEVEL 1;
+COMP "TMDS_OUT<0>" LOCATE = SITE "C5" LEVEL 1;
+COMP "TMDS_OUT<1>" LOCATE = SITE "B6" LEVEL 1;
+COMP "TMDS_OUT<2>" LOCATE = SITE "C7" LEVEL 1;
+COMP "TMDS_OUT<3>" LOCATE = SITE "D11" LEVEL 1;
+COMP "TMDS_INB<2>" LOCATE = SITE "F9" LEVEL 1;
+COMP "MemAdr_ext<10>" LOCATE = SITE "F18" LEVEL 1;
+COMP "MemAdr_ext<11>" LOCATE = SITE "F17" LEVEL 1;
+COMP "MemAdr_ext<12>" LOCATE = SITE "K13" LEVEL 1;
+COMP "MemAdr_ext<20>" LOCATE = SITE "G14" LEVEL 1;
+COMP "MemAdr_ext<13>" LOCATE = SITE "K12" LEVEL 1;
+COMP "MemAdr_ext<21>" LOCATE = SITE "F14" LEVEL 1;
+COMP "MemAdr_ext<14>" LOCATE = SITE "E18" LEVEL 1;
+COMP "MemAdr_ext<22>" LOCATE = SITE "C18" LEVEL 1;
+COMP "MemAdr_ext<15>" LOCATE = SITE "E16" LEVEL 1;
+COMP "MemAdr_ext<16>" LOCATE = SITE "G13" LEVEL 1;
+COMP "MemAdr_ext<17>" LOCATE = SITE "H12" LEVEL 1;
+COMP "MemAdr_ext<18>" LOCATE = SITE "D18" LEVEL 1;
+COMP "MemAdr_ext<19>" LOCATE = SITE "D17" LEVEL 1;
+COMP "MT_CLK" LOCATE = SITE "R10" LEVEL 1;
+COMP "MemDB<10>" LOCATE = SITE "P12" LEVEL 1;
+COMP "MemDB<11>" LOCATE = SITE "U13" LEVEL 1;
+COMP "MemDB<12>" LOCATE = SITE "V13" LEVEL 1;
+COMP "MemDB<13>" LOCATE = SITE "U10" LEVEL 1;
+COMP "MemDB<14>" LOCATE = SITE "R8" LEVEL 1;
+COMP "MemDB<15>" LOCATE = SITE "T8" LEVEL 1;
+COMP "TMDS_IN<1>" LOCATE = SITE "B9" LEVEL 1;
+COMP "ADV_out" LOCATE = SITE "H18" LEVEL 1;
+COMP "MemAdr_ext<0>" LOCATE = SITE "K18" LEVEL 1;
+COMP "MemAdr_ext<1>" LOCATE = SITE "K17" LEVEL 1;
+COMP "MemAdr_ext<2>" LOCATE = SITE "J18" LEVEL 1;
+COMP "MemAdr_ext<3>" LOCATE = SITE "J16" LEVEL 1;
+COMP "MemAdr_ext<4>" LOCATE = SITE "G18" LEVEL 1;
+COMP "MemAdr_ext<5>" LOCATE = SITE "G16" LEVEL 1;
+COMP "MemAdr_ext<6>" LOCATE = SITE "H16" LEVEL 1;
+COMP "MemAdr_ext<7>" LOCATE = SITE "H15" LEVEL 1;
+COMP "MemAdr_ext<8>" LOCATE = SITE "H14" LEVEL 1;
+COMP "MemAdr_ext<9>" LOCATE = SITE "H13" LEVEL 1;
+COMP "MemDB<0>" LOCATE = SITE "R13" LEVEL 1;
+COMP "MemDB<1>" LOCATE = SITE "T14" LEVEL 1;
+COMP "MemDB<2>" LOCATE = SITE "V14" LEVEL 1;
+COMP "MemDB<3>" LOCATE = SITE "U5" LEVEL 1;
+COMP "MemDB<4>" LOCATE = SITE "V5" LEVEL 1;
+COMP "MemDB<5>" LOCATE = SITE "R3" LEVEL 1;
+COMP "MemDB<6>" LOCATE = SITE "T3" LEVEL 1;
+COMP "MemDB<7>" LOCATE = SITE "R5" LEVEL 1;
+COMP "MemDB<8>" LOCATE = SITE "N5" LEVEL 1;
+COMP "MemDB<9>" LOCATE = SITE "P6" LEVEL 1;
+COMP "CRE_out" LOCATE = SITE "M18" LEVEL 1;
+COMP "TMDS_IN<2>" LOCATE = SITE "G9" LEVEL 1;
+PIN VLSI_HDMI_MEM_CURSO/Mram_LineBuffer_pins<20> = BEL
+        "VLSI_HDMI_MEM_CURSO/Mram_LineBuffer" PINNAME CLKA;
+PIN VLSI_HDMI_MEM_CURSO/mem_video/Mram_line_buffer_pins<21> = BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/Mram_line_buffer" PINNAME CLKB;
+PIN
+        VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ROM_8x256__1/Mram_EDID_ROM_pins<10>
+        = BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ROM_8x256__1/Mram_EDID_ROM"
+        PINNAME CLKAWRCLK;
+TIMEGRP VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx = PIN
+        "VLSI_HDMI_MEM_CURSO/Mram_LineBuffer_pins<20>" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_2"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_3"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_4"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_5"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_6"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_7"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_8"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/line_buffer_read_address_9"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_6"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_7"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_8"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_9"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_10"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_11"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_12"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_13"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_14"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_15"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_16"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_17"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_18"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_19"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_20"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_21"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/external_ram_write_address_22"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_0" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_1" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_2" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_3" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_4" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_5" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_6" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_8" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/one_shot_1/shift_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/one_shot_1/shift_1"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/one_shot_1/sigOut"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/start_external_ram_write"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_7" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/counter_9" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video/mem_video_writer/WRITE" PIN
+        "VLSI_HDMI_MEM_CURSO/mem_video/Mram_line_buffer_pins<21>" BEL
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkout1_buf" BEL
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/MT_CLK" BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/word_offset_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/word_offset_1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/word_offset_2"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/word_offset_3"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/word_offset_4"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/word_offset_5"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/word_offset_6"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/word_offset_7"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/state_FSM_FFd1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/state_FSM_FFd3"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/state_FSM_FFd2"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/tx_data"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/generate_ack"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/operation_started"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/start_operation"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/valid_dev_addr"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/scl_pin_reg_1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/byte_received_ret"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_out_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_out_1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_out_2"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_out_3"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_out_4"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_out_5"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_out_6"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_out_7"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/bit_counter_2"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/sda_pin_reg_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/sda_pin_reg_1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_received_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_received_1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_received_2"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_received_3"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_received_4"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_received_5"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_received_6"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/data_received_7"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd2"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/state_FSM_FFd1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/operation_completed"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/SDA_PIN_enable_out"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/SDA_PIN_driver"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/write_op"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/send_ack"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/line_ack"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/byte_received"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/ROM_8x256__1/Mram_EDID_ROM_pins<10>"
+        BEL "VLSI_HDMI_MEM_CURSO/PSDRAM/_WAIT" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/Writing" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/ADV" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_0" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_1" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_2" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_3" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_4" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_5" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_6" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_7" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_8" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_9" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_10" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_11" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_12" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_13" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_14" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataToBus_15" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/StartUploading" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/ReadyRead" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataCounter_0" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataCounter_1" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataCounter_2" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataCounter_3" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataCounter_4" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataCounter_5" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/ReadyWrite" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/WE" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/StartDownloading" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/ConfigReady" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/Counter_0" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/Counter_1" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/Counter_2" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/CRE" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_0" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_1" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_2" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_3" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_4" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_5" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_6" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_7" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_8" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_9" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_10" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_11" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_12" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_13" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_14" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/DataRead_15" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/OE" BEL "VLSI_HDMI_MEM_CURSO/PSDRAM/CE"
+        BEL "VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd4" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd3" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd2" BEL
+        "VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd1" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_0"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_1"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_2"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_3"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_4"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_5"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_6"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_7"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_8"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_9"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_10"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_11"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_12"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_13"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_14"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/Data_to_write_in_line_buffer_15"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_0"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_1"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_2"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_3"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_4"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_5"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_6"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_7"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_8"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_address_9"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_6"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_7"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_8"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_9"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_10"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_11"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_12"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_13"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_14"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_15"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_16"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_17"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_18"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_19"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_20"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_21"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/external_ram_read_address_22"
+        BEL "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_0" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_1" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_2" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_3" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_4" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_5" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_6" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_8" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/one_shot_1/shift_0" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/one_shot_1/shift_1" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/one_shot_1/sigOut" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_7" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/counter_9" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/READ" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/line_buffer_write_enable" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_video_reader/start_external_ram_read" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_address_scheduler/state_FSM_FFd1" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_address_scheduler/state_FSM_FFd3" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_address_scheduler/state_FSM_FFd2" BEL
+        "VLSI_HDMI_MEM_CURSO/mem_address_scheduler/mem_mux" BEL
+        "VLSI_HDMI_MEM_CURSO/temp" BEL "VLSI_HDMI_MEM_CURSO/start_config";
+PIN VLSI_HDMI_MEM_CURSO/Mram_LineBuffer_pins<21> = BEL
+        "VLSI_HDMI_MEM_CURSO/Mram_LineBuffer" PINNAME CLKB;
+TIMEGRP VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1 = PIN
+        "VLSI_HDMI_MEM_CURSO/Mram_LineBuffer_pins<21>" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/din_q_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/din_q_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/din_q_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/din_q_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/din_q_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/n1d_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/q_m_reg_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/q_m_reg_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/q_m_reg_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/q_m_reg_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/q_m_reg_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/q_m_reg_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/q_m_reg_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/n1q_m_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/n1q_m_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/n0q_m_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/n0q_m_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/n0q_m_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/dout_9" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/cnt_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/cnt_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/cnt_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/cnt_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/Mshreg_c1_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/c1_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/Mshreg_de_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/de_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/Mshreg_c0_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encb/c0_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/din_q_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/din_q_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/din_q_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/din_q_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/din_q_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/n1d_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/q_m_reg_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/q_m_reg_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/q_m_reg_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/q_m_reg_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/q_m_reg_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/q_m_reg_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/q_m_reg_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/n1q_m_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/n1q_m_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/n0q_m_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/n0q_m_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/n0q_m_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/dout_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/cnt_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/cnt_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/cnt_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/cnt_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/Mshreg_de_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encr/de_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n1d_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/q_m_reg_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n1q_m_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n1q_m_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/dout_9" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/cnt_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/cnt_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/cnt_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/cnt_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/Mshreg_de_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/de_reg" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[0].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[0].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[1].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[1].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[2].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[2].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[3].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[3].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[4].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[4].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[5].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[5].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[6].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[6].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[7].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[7].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[8].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[8].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[9].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[9].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[10].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[10].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[11].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[11].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[12].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[12].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[13].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[13].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[14].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[14].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[15].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[15].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[16].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[16].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[17].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[17].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[18].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[18].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[19].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[19].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[20].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[20].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[21].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[21].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[23].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[23].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[24].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[24].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[25].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[25].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[26].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[26].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[27].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[27].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[28].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[28].i_RAM16X1D_U/DP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[29].i_RAM16X1D_U/SP"
+        BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fifo_u/dram16s[29].i_RAM16X1D_U/DP"
+        BEL "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_wa0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_wa1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_wa2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_wa3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/blanking_active_line" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/active_req_data" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/active_send" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_count_req_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_count_req_9" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync_per_counter_9" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync_per_counter_9" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/h_sync" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/hv/v_sync" BEL
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pclkbufg1x";
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m_pins<1> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m" PINNAME
+        CLKDIV;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s_pins<1> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s" PINNAME
+        CLKDIV;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_m_pins<1> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_m" PINNAME
+        CLKDIV;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_s_pins<1> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_s" PINNAME
+        CLKDIV;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_m_pins<1> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_m" PINNAME
+        CLKDIV;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_s_pins<1> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_s" PINNAME
+        CLKDIV;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_m_pins<1> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_m" PINNAME
+        CLKDIV;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_s_pins<1> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_s" PINNAME
+        CLKDIV;
+TIMEGRP VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2 = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/toggle" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_rstsync" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_rstp" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdc_ra3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db9" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db10" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db11" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db12" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db13" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db14" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db15" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db16" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db17" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db18" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db19" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db20" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db21" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db22" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db23" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db24" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db25" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db26" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db27" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db28" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_db29" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out0" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out1" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out2" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out3" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out4" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out5" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out6" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out7" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out8" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out9" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out10" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out11" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out12" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out13" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fd_out14" BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/fdp_rst" PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m_pins<1>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s_pins<1>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_m_pins<1>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_s_pins<1>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_m_pins<1>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_s_pins<1>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_m_pins<1>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_s_pins<1>"
+        BEL "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0" BEL
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/pclkbufg2x";
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m_pins<0> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m" PINNAME
+        CLK0;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s_pins<0> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s" PINNAME
+        CLK0;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_m_pins<0> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_m" PINNAME
+        CLK0;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_s_pins<0> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_s" PINNAME
+        CLK0;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_m_pins<0> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_m" PINNAME
+        CLK0;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_s_pins<0> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_s" PINNAME
+        CLK0;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_m_pins<0> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_m" PINNAME
+        CLK0;
+PIN VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_s_pins<0> = BEL
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_s" PINNAME
+        CLK0;
+TIMEGRP VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk0 = PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m_pins<0>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_s_pins<0>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_m_pins<0>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes2/oserdes_s_pins<0>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_m_pins<0>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes1/oserdes_s_pins<0>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_m_pins<0>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/oserdes0/oserdes_s_pins<0>";
+PIN VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/dcm_clkgen_inst_pins<1>
+        = BEL
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/dcm_clkgen_inst"
+        PINNAME CLKIN;
+PIN
+        VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0>
+        = BEL
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN
+        VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/PLL_ADV_pins<2>
+        = BEL
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/PLL_ADV"
+        PINNAME CLKIN1;
+TIMEGRP sys_clk_pin = PIN
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/dcm_clkgen_inst_pins<1>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0>"
+        PIN
+        "VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/PLL_ADV_pins<2>"
+        BEL "ab/aux" BEL "ab/single_pulse_push" BEL "scg/counter_0" BEL
+        "scg/counter_1" BEL "scg/counter_2" BEL "scg/counter_3" BEL
+        "scg/counter_4" BEL "scg/counter_5" BEL "scg/counter_6" BEL
+        "scg/counter_7" BEL "scg/counter_8" BEL "scg/counter_9" BEL
+        "scg/counter_10" BEL "scg/counter_11" BEL "scg/counter_12" BEL
+        "scg/counter_13" BEL "scg/counter_14" BEL "scg/counter_15" BEL
+        "scg/slow_clk";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx"
+        TS_sys_clk_pin * 0.8 HIGH 50%;
+TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1 = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1"
+        TS_sys_clk_pin * 0.25 HIGH 50%;
+TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk0 = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk0"
+        TS_sys_clk_pin * 2.5 HIGH 50%;
+TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2 = PERIOD TIMEGRP
+        "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2"
+        TS_sys_clk_pin * 0.5 HIGH 50%;
+SCHEMATIC END;
+

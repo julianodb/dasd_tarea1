@@ -1,0 +1,2373 @@
+Release 14.7 - xst P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/common/DRAM16XN.v" into library work
+Parsing module <DRAM16XN>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/one_shot.v" into library work
+Parsing module <one_shot>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/serdes_n_to_1.v" into library work
+Parsing module <serdes_n_to_1>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/encode.v" into library work
+Parsing module <encode>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/convert_30to15_fifo.v" into library work
+Parsing module <convert_30to15_fifo>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/serdes_1_to_5_diff_data.v" into library work
+Parsing module <serdes_1_to_5_diff_data>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" into library work
+Parsing module <phsaligner>.
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 65. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 66. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 67. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 68. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 133. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 134. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 135. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 136. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 137. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 138. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 139. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v" Line 169. parameter declaration becomes local in phsaligner with formal parameter declaration list
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/chnlbond.v" into library work
+Parsing module <chnlbond>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/write_line.v" into library work
+Parsing module <write_line>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/h_sync__v_sync__gen.v" into library work
+Parsing module <h_sync__v_sync__gen>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/dvi_encoder_top.v" into library work
+Parsing module <dvi_encoder_top>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/decode.v" into library work
+Parsing module <decode>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/EDID/ROM_8x256.v" into library work
+Parsing module <ROM_8x256>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/EDID/I2C_EDID_protocol_ctrl.v" into library work
+Parsing module <I2C_EDID_protocol_ctrl>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/EDID/I2C_BYTE_TX_RX.v" into library work
+Parsing module <I2C_BYTE_TX_RX>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/System_Clock_Generator.v" into library work
+Parsing module <System_Clock_Generator>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/scheduler.v" into library work
+Parsing module <scheduler>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/read_line.v" into library work
+Parsing module <read_line>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/PSDRAMDriver.v" into library work
+Parsing module <PSDRAMDriver>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/mem_video__writer.v" into library work
+Parsing module <mem_video__writer>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/dvi_tx_fixed_res.v" into library work
+Parsing module <dvi_tx_fixed_res>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" into library work
+Parsing module <dvi_decoder>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/EDID/EDID_I2C.v" into library work
+Parsing module <EDID_I2C>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" into library work
+Parsing module <HDMI_WRAPPER>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/slow_clk_gen.v" into library work
+Parsing module <slow_clk_gen>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/anti_bouncing.v" into library work
+Parsing module <anti_bouncing>.
+Analyzing Verilog file "/home/juliano/DASD2014/Tarea1/top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+WARNING:HDLCompiler:872 - "/home/juliano/DASD2014/Tarea1/top.v" Line 172: Using initial value of Capture_Latency since it is never assigned
+WARNING:HDLCompiler:872 - "/home/juliano/DASD2014/Tarea1/top.v" Line 240: Using initial value of Display_Latency since it is never assigned
+
+Elaborating module <HDMI_WRAPPER>.
+
+Elaborating module <System_Clock_Generator>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_CLKGEN(CLKFXDV_DIVIDE=2,CLKFX_DIVIDE=5,CLKFX_MULTIPLY=4,SPREAD_SPECTRUM="NONE",STARTUP_WAIT="FALSE",CLKIN_PERIOD=10.0,CLKFX_MD_MAX=0.0)>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <OBUF>.
+
+Elaborating module <PLL_BASE(CLKIN_PERIOD=10,CLKFBOUT_MULT=10,CLKOUT0_DIVIDE=4,CLKOUT1_DIVIDE=40,CLKOUT2_DIVIDE=20,COMPENSATION="INTERNAL")>.
+
+Elaborating module <BUFPLL(DIVIDE=5)>.
+
+Elaborating module <EDID_I2C(rom_init_file="rom_data/edid_2.coe")>.
+
+Elaborating module <I2C_EDID_protocol_ctrl>.
+
+Elaborating module <I2C_BYTE_TX_RX>.
+
+Elaborating module <ROM_8x256(rom_init_file="rom_data/edid_2.coe")>.
+Reading initialization file \"home/juliano/DASD2014/Tarea1/src/EDID/rom_data/edid_2.coe\".
+
+Elaborating module <dvi_tx_fixed_res>.
+
+Elaborating module <h_sync__v_sync__gen(H_PIXELS=640,V_LINES=480,H_FN_PRCH=16,H_SYNC_PW=96,H_BK_PRCH=48,V_FN_PRCH=10,V_SYNC_PW=2,V_BK_PRCH=33,H_SYNC_POL=1'b0,V_SYNC_POL=1'b0)>.
+
+Elaborating module <dvi_encoder_top>.
+
+Elaborating module <encode(simple_encoder=0,aux_data_constant=0)>.
+
+Elaborating module <encode(simple_encoder=0,aux_data_constant=1)>.
+
+Elaborating module <convert_30to15_fifo>.
+
+Elaborating module <FDC>.
+
+Elaborating module <DRAM16XN(data_width=30)>.
+
+Elaborating module <RAM16X1D>.
+
+Elaborating module <FDP>.
+
+Elaborating module <FD>.
+
+Elaborating module <FDR>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <FDE>.
+
+Elaborating module <serdes_n_to_1(SF=5)>.
+
+Elaborating module <OSERDES2(DATA_WIDTH=5,DATA_RATE_OQ="SDR",DATA_RATE_OT="SDR",SERDES_MODE="MASTER",OUTPUT_MODE="DIFFERENTIAL")>.
+
+Elaborating module <OSERDES2(DATA_WIDTH=5,DATA_RATE_OQ="SDR",DATA_RATE_OT="SDR",SERDES_MODE="SLAVE",OUTPUT_MODE="DIFFERENTIAL")>.
+
+Elaborating module <OBUFDS>.
+
+Elaborating module <dvi_decoder>.
+
+Elaborating module <IBUFDS(IOSTANDARD="TMDS_33",DIFF_TERM="FALSE")>.
+
+Elaborating module <BUFIO2(DIVIDE_BYPASS="TRUE",DIVIDE=1)>.
+
+Elaborating module <PLL_BASE(CLKIN_PERIOD=10,CLKFBOUT_MULT=10,CLKOUT0_DIVIDE=1,CLKOUT1_DIVIDE=10,CLKOUT2_DIVIDE=5,COMPENSATION="INTERNAL")>.
+
+Elaborating module <decode>.
+
+Elaborating module <serdes_1_to_5_diff_data(DIFF_TERM="FALSE",BITSLIP_ENABLE="TRUE")>.
+
+Elaborating module <IBUFDS(DIFF_TERM="FALSE")>.
+
+Elaborating module <IODELAY2(DATA_RATE="SDR",IDELAY_VALUE=0,IDELAY2_VALUE=0,IDELAY_MODE="NORMAL",ODELAY_VALUE=0,IDELAY_TYPE="DIFF_PHASE_DETECTOR",COUNTER_WRAPAROUND="STAY_AT_LIMIT",DELAY_SRC="IDATAIN",SERDES_MODE="MASTER",SIM_TAPDELAY_VALUE=49)>.
+
+Elaborating module <IODELAY2(DATA_RATE="SDR",IDELAY_VALUE=0,IDELAY2_VALUE=0,IDELAY_MODE="NORMAL",ODELAY_VALUE=0,IDELAY_TYPE="DIFF_PHASE_DETECTOR",COUNTER_WRAPAROUND="WRAPAROUND",DELAY_SRC="IDATAIN",SERDES_MODE="SLAVE",SIM_TAPDELAY_VALUE=49)>.
+
+Elaborating module <ISERDES2(DATA_WIDTH=5,DATA_RATE="SDR",BITSLIP_ENABLE="TRUE",SERDES_MODE="MASTER",INTERFACE_TYPE="RETIMED")>.
+
+Elaborating module <ISERDES2(DATA_WIDTH=5,DATA_RATE="SDR",BITSLIP_ENABLE="TRUE",SERDES_MODE="SLAVE",INTERFACE_TYPE="RETIMED")>.
+
+Elaborating module <phsaligner>.
+
+Elaborating module <chnlbond>.
+
+Elaborating module <DRAM16XN(data_width=10)>.
+WARNING:HDLCompiler:1127 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" Line 215: Assignment to de_g ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" Line 237: Assignment to de_r ignored, since the identifier is never used
+
+Elaborating module <PSDRAMDriver>.
+
+Elaborating module <scheduler>.
+
+Elaborating module <read_line>.
+
+Elaborating module <one_shot>.
+
+Elaborating module <mem_video__writer>.
+
+Elaborating module <write_line>.
+WARNING:HDLCompiler:1127 - "/home/juliano/DASD2014/Tarea1/top.v" Line 80: Assignment to EXTERNAL_RAM_INTERNAL_CLK ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juliano/DASD2014/Tarea1/top.v" Line 87: Assignment to First_pixel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juliano/DASD2014/Tarea1/top.v" Line 88: Assignment to Last_pixel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juliano/DASD2014/Tarea1/top.v" Line 91: Assignment to Pixel_data_valid ignored, since the identifier is never used
+
+Elaborating module <slow_clk_gen>.
+WARNING:HDLCompiler:413 - "/home/juliano/DASD2014/Tarea1/slow_clk_gen.v" Line 35: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <anti_bouncing>.
+WARNING:HDLCompiler:413 - "/home/juliano/DASD2014/Tarea1/top.v" Line 126: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/top.v".
+WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/top.v" line 55: Output port <HDMI_Pixel_Clock_25MHz> of the instance <VLSI_HDMI_MEM_CURSO> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/top.v" line 55: Output port <EXTERNAL_RAM_INTERNAL_CLK> of the instance <VLSI_HDMI_MEM_CURSO> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/top.v" line 55: Output port <First_pixel> of the instance <VLSI_HDMI_MEM_CURSO> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/top.v" line 55: Output port <Last_pixel> of the instance <VLSI_HDMI_MEM_CURSO> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/top.v" line 55: Output port <Pixel_data_valid> of the instance <VLSI_HDMI_MEM_CURSO> is unconnected or connected to loadless signal.
+    Found 5-bit register for signal <R>.
+    Found 6-bit register for signal <G>.
+    Found 5-bit register for signal <B>.
+    Found 2-bit register for signal <curr_YRGB>.
+    Found 2-bit adder for signal <curr_YRGB[1]_GND_1_o_add_1_OUT> created at line 126.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <HDMI_WRAPPER>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v".
+    Set property "KEEP = TRUE" for signal <First_pixel>.
+    Set property "KEEP = TRUE" for signal <Last_pixel>.
+    Set property "KEEP = TRUE" for signal <Pixel_data_valid>.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <sdout> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <reset> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <pclkx2> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <pclkx10> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <pllclk0> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <pllclk1> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <pllclk2> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <pll_lckd> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <serdesstrobe> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <tmdsclk> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <hsync> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <blue_vld> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <green_vld> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <red_vld> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <blue_rdy> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <green_rdy> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <red_rdy> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 150: Output port <psalgnerr> of the instance <dvi_decoder_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 209: Output port <DebugRam> of the instance <PSDRAM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 209: Output port <ReadyReadBCR> of the instance <PSDRAM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 209: Output port <StartSendBuff> of the instance <PSDRAM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/HDMI_WRAPPER.v" line 282: Output port <RAM_BUSY> of the instance <mem_video_reader> is unconnected or connected to loadless signal.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <LineBuffer>, simulation mismatch.
+    Found 640x16-bit dual-port RAM <Mram_LineBuffer> for signal <LineBuffer>.
+    Found 1-bit register for signal <Last_pixel>.
+    Found 1-bit register for signal <Pixel_data_valid>.
+    Found 16-bit register for signal <Pixel>.
+    Found 31-bit register for signal <rx_vsync__lat_pip>.
+    Found 31-bit register for signal <rx_active__lat_pip>.
+    Found 1-bit register for signal <start_config>.
+    Found 1-bit register for signal <temp>.
+    Found 1-bit register for signal <First_pixel>.
+    Found 5-bit comparator greater for signal <Capture_Latency[4]_GND_2_o_LessThan_16_o> created at line 304
+    Summary:
+	inferred   1 RAM(s).
+	inferred  83 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <HDMI_WRAPPER> synthesized.
+
+Synthesizing Unit <System_Clock_Generator>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/System_Clock_Generator.v".
+    Summary:
+	no macro.
+Unit <System_Clock_Generator> synthesized.
+
+Synthesizing Unit <EDID_I2C>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/EDID/EDID_I2C.v".
+        rom_init_file = "rom_data/edid_2.coe"
+    Summary:
+	no macro.
+Unit <EDID_I2C> synthesized.
+
+Synthesizing Unit <I2C_EDID_protocol_ctrl>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/EDID/I2C_EDID_protocol_ctrl.v".
+    Found 1-bit register for signal <generate_ack>.
+    Found 1-bit register for signal <tx_data>.
+    Found 1-bit register for signal <valid_dev_addr>.
+    Found 1-bit register for signal <operation_started>.
+    Found 3-bit register for signal <state>.
+    Found 8-bit register for signal <word_offset>.
+    Found 1-bit register for signal <start_operation>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <word_offset[7]_GND_11_o_add_27_OUT> created at line 200.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred  47 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <I2C_EDID_protocol_ctrl> synthesized.
+
+Synthesizing Unit <I2C_BYTE_TX_RX>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/EDID/I2C_BYTE_TX_RX.v".
+    Found 2-bit register for signal <sda_pin_reg>.
+    Found 1-bit register for signal <byte_received_ret>.
+    Found 1-bit register for signal <byte_received>.
+    Found 1-bit register for signal <operation_completed>.
+    Found 8-bit register for signal <data_received>.
+    Found 1-bit register for signal <line_ack>.
+    Found 1-bit register for signal <SDA_PIN_enable_out>.
+    Found 3-bit register for signal <bit_counter>.
+    Found 1-bit register for signal <send_ack>.
+    Found 1-bit register for signal <write_op>.
+    Found 8-bit register for signal <data_out>.
+    Found 1-bit register for signal <SDA_PIN_driver>.
+    Found 2-bit register for signal <state>.
+    Found 2-bit register for signal <scl_pin_reg>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <bit_counter[2]_GND_12_o_add_21_OUT> created at line 161.
+    Found 1-bit tristate buffer for signal <SDA_PIN> created at line 33
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+	inferred  29 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <I2C_BYTE_TX_RX> synthesized.
+
+Synthesizing Unit <ROM_8x256>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/EDID/ROM_8x256.v".
+        rom_init_file = "rom_data/edid_2.coe"
+WARNING:Xst:2999 - Signal 'EDID_ROM', unconnected in block 'ROM_8x256', is tied to its initial value.
+    Found 256x8-bit single-port Read Only RAM <Mram_EDID_ROM> for signal <EDID_ROM>.
+    Found 8-bit register for signal <data_out>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <ROM_8x256> synthesized.
+
+Synthesizing Unit <dvi_tx_fixed_res>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/dvi_tx_fixed_res.v".
+        H_PIXELS = 640
+        V_LINES = 480
+        H_FN_PRCH = 16
+        H_SYNC_PW = 96
+        H_BK_PRCH = 48
+        V_FN_PRCH = 10
+        V_SYNC_PW = 2
+        V_BK_PRCH = 33
+        H_SYNC_POL = 1'b0
+        V_SYNC_POL = 1'b0
+    Summary:
+	no macro.
+Unit <dvi_tx_fixed_res> synthesized.
+
+Synthesizing Unit <h_sync__v_sync__gen>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/h_sync__v_sync__gen.v".
+        H_PIXELS = 640
+        V_LINES = 480
+        H_FN_PRCH = 16
+        H_SYNC_PW = 96
+        H_BK_PRCH = 48
+        V_FN_PRCH = 10
+        V_SYNC_PW = 2
+        V_BK_PRCH = 33
+        H_SYNC_POL = 1'b0
+        V_SYNC_POL = 1'b0
+    Found 9-bit register for signal <v_count_req>.
+    Found 1-bit register for signal <h_sync>.
+    Found 1-bit register for signal <v_sync>.
+    Found 1-bit register for signal <active_req_data>.
+    Found 1-bit register for signal <active_send>.
+    Found 10-bit register for signal <h_sync_per_counter>.
+    Found 10-bit register for signal <v_sync_per_counter>.
+    Found 1-bit register for signal <blanking_active_line>.
+    Found 10-bit register for signal <h_count_req>.
+    Found 10-bit adder for signal <h_sync_per_counter[9]_GND_16_o_add_10_OUT> created at line 140.
+    Found 10-bit adder for signal <v_sync_per_counter[9]_GND_16_o_add_11_OUT> created at line 151.
+    Found 9-bit adder for signal <v_count_req[8]_GND_16_o_add_14_OUT> created at line 161.
+    Found 10-bit adder for signal <h_count_req[9]_GND_16_o_add_21_OUT> created at line 194.
+    Found 10-bit comparator greater for signal <h_active_start_comp> created at line 104
+    Found 10-bit comparator greater for signal <h_active_end_comp> created at line 105
+    Found 10-bit comparator greater for signal <v_active_start_comp> created at line 108
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <h_sync__v_sync__gen> synthesized.
+
+Synthesizing Unit <dvi_encoder_top>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/dvi_encoder_top.v".
+    Found 5-bit register for signal <tmdsclkint>.
+    Found 1-bit register for signal <toggle>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <dvi_encoder_top> synthesized.
+
+Synthesizing Unit <encode_1>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/encode.v".
+        simple_encoder = 0
+        aux_data_constant = 0
+    Found 8-bit register for signal <din_q>.
+    Found 4-bit register for signal <n1q_m>.
+    Found 4-bit register for signal <n0q_m>.
+    Found 1-bit register for signal <de_q>.
+    Found 1-bit register for signal <de_reg>.
+    Found 9-bit register for signal <q_m_reg>.
+    Found 1-bit register for signal <c0_q>.
+    Found 1-bit register for signal <c0_reg>.
+    Found 1-bit register for signal <c1_q>.
+    Found 1-bit register for signal <c1_reg>.
+    Found 10-bit register for signal <dout>.
+    Found 5-bit register for signal <cnt>.
+    Found 4-bit register for signal <n1d>.
+    Found 4-bit subtractor for signal <PWR_18_o_BUS_0017_sub_29_OUT> created at line 253.
+    Found 5-bit subtractor for signal <n0235> created at line 335.
+    Found 5-bit subtractor for signal <n0237> created at line 341.
+    Found 5-bit subtractor for signal <n0238> created at line 341.
+    Found 2-bit adder for signal <n0185[1:0]> created at line 205.
+    Found 3-bit adder for signal <n0188[2:0]> created at line 205.
+    Found 2-bit adder for signal <n0206[1:0]> created at line 252.
+    Found 3-bit adder for signal <n0209[2:0]> created at line 252.
+    Found 5-bit adder for signal <n0234> created at line 335.
+    Found 5-bit adder for signal <cnt[4]_GND_18_o_add_48_OUT> created at line 335.
+    Found 5-bit adder for signal <cnt[4]_GND_18_o_add_51_OUT> created at line 341.
+    Found 4-bit adder for signal <_n0250> created at line 205.
+    Found 4-bit adder for signal <_n0251> created at line 205.
+    Found 4-bit adder for signal <_n0252> created at line 205.
+    Found 4-bit adder for signal <_n0253> created at line 205.
+    Found 4-bit adder for signal <BUS_0003_GND_18_o_add_7_OUT> created at line 205.
+    Found 4-bit adder for signal <_n0255> created at line 252.
+    Found 4-bit adder for signal <_n0256> created at line 252.
+    Found 4-bit adder for signal <_n0257> created at line 252.
+    Found 4-bit adder for signal <_n0258> created at line 252.
+    Found 4-bit adder for signal <BUS_0010_GND_18_o_add_20_OUT> created at line 252.
+    Found 5-bit adder for signal <cnt[4]_GND_18_o_sub_42_OUT> created at line 327.
+    Found 5-bit adder for signal <cnt[4]_GND_18_o_sub_44_OUT> created at line 327.
+    Found 4x10-bit Read Only RAM for signal <c1_final_PWR_18_o_wide_mux_54_OUT>
+    Found 4-bit comparator greater for signal <GND_18_o_n1d[3]_LessThan_11_o> created at line 217
+    Found 4-bit comparator equal for signal <n1q_m[3]_n0q_m[3]_equal_33_o> created at line 261
+    Found 4-bit comparator greater for signal <n0q_m[3]_n1q_m[3]_LessThan_34_o> created at line 265
+    Found 4-bit comparator greater for signal <n1q_m[3]_n0q_m[3]_LessThan_35_o> created at line 265
+    Summary:
+	inferred   1 RAM(s).
+	inferred  23 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  36 Multiplexer(s).
+Unit <encode_1> synthesized.
+
+Synthesizing Unit <encode_2>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/encode.v".
+        simple_encoder = 0
+        aux_data_constant = 1
+    Found 10-bit register for signal <dout>.
+    Found 5-bit register for signal <cnt>.
+    Found 8-bit register for signal <din_q>.
+    Found 4-bit register for signal <n1q_m>.
+    Found 4-bit register for signal <n0q_m>.
+    Found 1-bit register for signal <de_q>.
+    Found 1-bit register for signal <de_reg>.
+    Found 9-bit register for signal <q_m_reg>.
+    Found 4-bit register for signal <n1d>.
+    Found 4-bit subtractor for signal <PWR_21_o_BUS_0017_sub_29_OUT> created at line 253.
+    Found 5-bit subtractor for signal <n0231> created at line 335.
+    Found 5-bit subtractor for signal <n0233> created at line 341.
+    Found 5-bit subtractor for signal <n0234> created at line 341.
+    Found 2-bit adder for signal <n0181[1:0]> created at line 205.
+    Found 3-bit adder for signal <n0184[2:0]> created at line 205.
+    Found 2-bit adder for signal <n0202[1:0]> created at line 252.
+    Found 3-bit adder for signal <n0205[2:0]> created at line 252.
+    Found 5-bit adder for signal <n0230> created at line 335.
+    Found 5-bit adder for signal <cnt[4]_GND_19_o_add_47_OUT> created at line 335.
+    Found 5-bit adder for signal <cnt[4]_GND_19_o_add_50_OUT> created at line 341.
+    Found 4-bit adder for signal <_n0246> created at line 205.
+    Found 4-bit adder for signal <_n0247> created at line 205.
+    Found 4-bit adder for signal <_n0248> created at line 205.
+    Found 4-bit adder for signal <_n0249> created at line 205.
+    Found 4-bit adder for signal <BUS_0003_GND_19_o_add_7_OUT> created at line 205.
+    Found 4-bit adder for signal <_n0251> created at line 252.
+    Found 4-bit adder for signal <_n0252> created at line 252.
+    Found 4-bit adder for signal <_n0253> created at line 252.
+    Found 4-bit adder for signal <_n0254> created at line 252.
+    Found 4-bit adder for signal <BUS_0010_GND_19_o_add_20_OUT> created at line 252.
+    Found 5-bit adder for signal <cnt[4]_GND_19_o_sub_43_OUT> created at line 327.
+    Found 5-bit adder for signal <cnt[4]_GND_19_o_sub_41_OUT> created at line 327.
+    Found 4-bit comparator greater for signal <GND_19_o_n1d[3]_LessThan_11_o> created at line 217
+    Found 4-bit comparator equal for signal <n1q_m[3]_n0q_m[3]_equal_33_o> created at line 261
+    Found 4-bit comparator greater for signal <n0q_m[3]_n1q_m[3]_LessThan_34_o> created at line 265
+    Found 4-bit comparator greater for signal <n1q_m[3]_n0q_m[3]_LessThan_35_o> created at line 265
+    Summary:
+	inferred  23 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  37 Multiplexer(s).
+Unit <encode_2> synthesized.
+
+Synthesizing Unit <convert_30to15_fifo>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/convert_30to15_fifo.v".
+        ADDR0 = 4'b0000
+        ADDR1 = 4'b0001
+        ADDR2 = 4'b0010
+        ADDR3 = 4'b0011
+        ADDR4 = 4'b0100
+        ADDR5 = 4'b0101
+        ADDR6 = 4'b0110
+        ADDR7 = 4'b0111
+        ADDR8 = 4'b1000
+        ADDR9 = 4'b1001
+        ADDR10 = 4'b1010
+        ADDR11 = 4'b1011
+        ADDR12 = 4'b1100
+        ADDR13 = 4'b1101
+        ADDR14 = 4'b1110
+        ADDR15 = 4'b1111
+    Set property "ASYNC_REG = TRUE" for instance <fdp_rst>.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/convert_30to15_fifo.v" line 66: Output port <O_DATA_OUT> of the instance <fifo_u> is unconnected or connected to loadless signal.
+    Found 16x4-bit Read Only RAM for signal <wa_d>
+    Found 16x4-bit Read Only RAM for signal <ra_d>
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <convert_30to15_fifo> synthesized.
+
+Synthesizing Unit <DRAM16XN_1>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/common/DRAM16XN.v".
+        data_width = 30
+    Summary:
+	no macro.
+Unit <DRAM16XN_1> synthesized.
+
+Synthesizing Unit <serdes_n_to_1>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_encoder/serdes_n_to_1.v".
+        SF = 5
+    Summary:
+	no macro.
+Unit <serdes_n_to_1> synthesized.
+
+Synthesizing Unit <dvi_decoder>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v".
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" line 197: Output port <c0> of the instance <dec_g> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" line 197: Output port <c1> of the instance <dec_g> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" line 197: Output port <de> of the instance <dec_g> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" line 219: Output port <c0> of the instance <dec_r> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" line 219: Output port <c1> of the instance <dec_r> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/dvi_decoder.v" line 219: Output port <de> of the instance <dec_r> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <dvi_decoder> synthesized.
+
+Synthesizing Unit <decode>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/decode.v".
+        CTRLTOKEN0 = 10'b1101010100
+        CTRLTOKEN1 = 10'b0010101011
+        CTRLTOKEN2 = 10'b0101010100
+        CTRLTOKEN3 = 10'b1010101011
+    Found 1-bit register for signal <toggle>.
+    Found 5-bit register for signal <raw5bit_q>.
+    Found 10-bit register for signal <rawword>.
+    Found 1-bit register for signal <bitslip_q>.
+    Found 1-bit register for signal <bitslipx2>.
+    Found 1-bit register for signal <c0>.
+    Found 1-bit register for signal <c1>.
+    Found 1-bit register for signal <de>.
+    Found 8-bit register for signal <dout>.
+    Found 10-bit register for signal <sdout>.
+    Found 1-bit register for signal <flipgearx2>.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <decode> synthesized.
+
+Synthesizing Unit <serdes_1_to_5_diff_data>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/serdes_1_to_5_diff_data.v".
+        DIFF_TERM = "FALSE"
+        SIM_TAP_DELAY = 49
+        BITSLIP_ENABLE = "TRUE"
+    Found 9-bit register for signal <counter>.
+    Found 5-bit register for signal <pdcounter>.
+    Found 4-bit register for signal <state>.
+    Found 1-bit register for signal <cal_data_master>.
+    Found 1-bit register for signal <cal_data_sint>.
+    Found 1-bit register for signal <enable>.
+    Found 1-bit register for signal <ce_data_inta>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <rst_data>.
+    Found 1-bit register for signal <busy_data_d>.
+    Found 1-bit register for signal <incdec_data_d>.
+    Found 1-bit register for signal <valid_data_d>.
+    Found 1-bit register for signal <ce_data>.
+    Found 1-bit register for signal <inc_data_int>.
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 36                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 6                                              |
+    | Clock              | gclk (rising_edge)                             |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit adder for signal <counter[8]_GND_38_o_add_2_OUT> created at line 122.
+    Found 5-bit adder for signal <pdcounter[4]_GND_38_o_add_54_OUT> created at line 224.
+    Found 5-bit adder for signal <pdcounter[4]_PWR_40_o_add_57_OUT> created at line 227.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serdes_1_to_5_diff_data> synthesized.
+
+Synthesizing Unit <phsaligner>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/phsaligner.v".
+        OPENEYE_CNT_WD = 3
+        CTKNCNTWD = 7
+        SRCHTIMERWD = 12
+    Found 1-bit register for signal <ctkn_srh_rst>.
+    Found 1-bit register for signal <ctkn_cnt_rst>.
+    Found 3-bit register for signal <bitslip_cnt>.
+    Found 6-bit register for signal <cstate>.
+    Found 1-bit register for signal <psaligned>.
+    Found 1-bit register for signal <bitslip>.
+    Found 1-bit register for signal <flipgear>.
+    Found 1-bit register for signal <blnkprd_cnt>.
+    Found 1-bit register for signal <rcvd_ctkn_q>.
+    Found 1-bit register for signal <blnkbgn>.
+    Found 12-bit register for signal <ctkn_srh_timer>.
+    Found 1-bit register for signal <ctkn_srh_tout>.
+    Found 7-bit register for signal <ctkn_counter>.
+    Found 1-bit register for signal <ctkn_cnt_tout>.
+    Found 1-bit register for signal <rcvd_ctkn>.
+    Found finite state machine <FSM_3> for signal <cstate>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000001                                         |
+    | Power Up State     | 000001                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit adder for signal <ctkn_srh_timer[11]_GND_46_o_add_6_OUT> created at line 98.
+    Found 7-bit adder for signal <ctkn_counter[6]_GND_46_o_add_12_OUT> created at line 122.
+    Found 3-bit adder for signal <bitslip_cnt[2]_GND_46_o_add_33_OUT> created at line 248.
+    Found 1-bit adder for signal <blnkprd_cnt[0]_PWR_47_o_add_34_OUT<0>> created at line 258.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <phsaligner> synthesized.
+
+Synthesizing Unit <chnlbond>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/chnlbond.v".
+        CTRLTOKEN0 = 10'b1101010100
+        CTRLTOKEN1 = 10'b0010101011
+        CTRLTOKEN2 = 10'b0101010100
+        CTRLTOKEN3 = 10'b1010101011
+INFO:Xst:3210 - "/home/juliano/DASD2014/Tarea1/src/HDMI/dvi_decoder/chnlbond.v" line 86: Output port <O_DATA_OUT> of the instance <cbfifo_i> is unconnected or connected to loadless signal.
+    Register <we> equivalent to <rawdata_vld_q> has been removed
+    Found 4-bit register for signal <wa>.
+    Found 10-bit register for signal <sdata>.
+    Found 1-bit register for signal <rcvd_ctkn>.
+    Found 1-bit register for signal <rcvd_ctkn_q>.
+    Found 1-bit register for signal <blnkbgn>.
+    Found 1-bit register for signal <skip_line>.
+    Found 1-bit register for signal <iamrdy>.
+    Found 1-bit register for signal <rawdata_vld_q>.
+    Found 1-bit register for signal <rawdata_vld_rising>.
+    Found 1-bit register for signal <ra_en>.
+    Found 4-bit register for signal <ra>.
+    Found 4-bit adder for signal <wa[3]_GND_48_o_add_2_OUT> created at line 79.
+    Found 4-bit adder for signal <ra[3]_GND_48_o_add_17_OUT> created at line 167.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+Unit <chnlbond> synthesized.
+
+Synthesizing Unit <DRAM16XN_2>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/HDMI/common/DRAM16XN.v".
+        data_width = 10
+    Summary:
+	no macro.
+Unit <DRAM16XN_2> synthesized.
+
+Synthesizing Unit <PSDRAMDriver>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/PSDRAMDriver.v".
+        NUMBER_OF_PIXELS = 64
+        OPCODE = 23'b00100000011001000111110
+        START_CONFIG1 = 1
+        START_CONFIG2 = 2
+        START_CONFIG3 = 3
+        START_CONFIG4 = 4
+        START_READ_BCR1 = 5
+        START_READ_BCR2 = 6
+        START_READ_BCR3 = 7
+        START_READ1 = 8
+        START_READ2 = 9
+        START_READ3 = 10
+        START_READ4 = 11
+        START_READ5 = 12
+        START_WRITE1 = 13
+        START_WRITE2 = 14
+        START_WRITE3 = 15
+        START_WRITE4 = 16
+WARNING:Xst:2935 - Signal 'LB', unconnected in block 'PSDRAMDriver', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'UB', unconnected in block 'PSDRAMDriver', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'ReadyReadBCR', unconnected in block 'PSDRAMDriver', is tied to its initial value (0).
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <CE>.
+    Found 8-bit register for signal <DataCounter>.
+    Found 1-bit register for signal <Writing>.
+    Found 1-bit register for signal <ReadyWrite>.
+    Found 1-bit register for signal <StartSendBuff>.
+    Found 16-bit register for signal <DataToBus>.
+    Found 1-bit register for signal <StartUploading>.
+    Found 1-bit register for signal <ADV>.
+    Found 1-bit register for signal <WE>.
+    Found 1-bit register for signal <StartDownloading>.
+    Found 1-bit register for signal <ReadyRead>.
+    Found 16-bit register for signal <DataRead>.
+    Found 3-bit register for signal <Counter>.
+    Found 1-bit register for signal <CRE>.
+    Found 1-bit register for signal <ConfigReady>.
+    Found 1-bit register for signal <_WAIT>.
+    Found 5-bit register for signal <Estados1>.
+INFO:Xst:1799 - State 00110 is never reached in FSM <Estados1>.
+INFO:Xst:1799 - State 00111 is never reached in FSM <Estados1>.
+    Found finite state machine <FSM_4> for signal <Estados1>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 24                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 5                                              |
+    | Clock              | ClkMem (falling_edge)                          |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <Counter[2]_GND_50_o_add_22_OUT> created at line 240.
+    Found 8-bit adder for signal <DataCounter[7]_GND_50_o_add_34_OUT> created at line 317.
+    Found 1-bit tristate buffer for signal <DATA_BUS<15>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<14>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<13>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<12>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<11>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<10>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<9>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<8>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<7>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<6>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<5>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<4>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<3>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<2>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<1>> created at line 73
+    Found 1-bit tristate buffer for signal <DATA_BUS<0>> created at line 73
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  56 D-type flip-flop(s).
+	inferred  63 Multiplexer(s).
+	inferred  16 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <PSDRAMDriver> synthesized.
+
+Synthesizing Unit <scheduler>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/scheduler.v".
+    Found 1-bit register for signal <mem_mux>.
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_5> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 3                                              |
+    | Clock              | mem_clk (rising_edge)                          |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <scheduler> synthesized.
+
+Synthesizing Unit <read_line>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/read_line.v".
+    Found 10-bit register for signal <counter>.
+    Found 1-bit register for signal <RAM_BUSY>.
+    Found 1-bit register for signal <READ>.
+    Found 1-bit register for signal <start_external_ram_read>.
+    Found 1-bit register for signal <line_buffer_write_enable>.
+    Found 10-bit register for signal <line_buffer_write_address>.
+    Found 16-bit register for signal <Data_to_write_in_line_buffer>.
+    Found 23-bit register for signal <external_ram_read_address>.
+    Found 10-bit adder for signal <counter[9]_GND_68_o_add_5_OUT> created at line 73.
+    Found 23-bit adder for signal <external_ram_read_address[22]_GND_68_o_add_7_OUT> created at line 77.
+    Found 10x9-bit multiplier for signal <PWR_52_o_v_line[8]_MuLt_2_OUT> created at line 62.
+    Found 10-bit comparator greater for signal <counter[9]_PWR_52_o_LessThan_10_o> created at line 79
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  63 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <read_line> synthesized.
+
+Synthesizing Unit <one_shot>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/one_shot.v".
+    Found 1-bit register for signal <sigOut>.
+    Found 2-bit register for signal <shift>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <one_shot> synthesized.
+
+Synthesizing Unit <mem_video__writer>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/mem_video__writer.v".
+        H_RES_PIX = 640
+        V_RES_PIX = 480
+        BASE_ADDR = 16'b0000000000000000
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <line_buffer>, simulation mismatch.
+    Found 640x16-bit dual-port RAM <Mram_line_buffer> for signal <line_buffer>.
+    Found 2-bit register for signal <v_sync_shift>.
+    Found 10-bit register for signal <h_count>.
+    Found 9-bit register for signal <v_count>.
+    Found 1-bit register for signal <line_ready>.
+    Found 2-bit register for signal <state>.
+    Found 9-bit register for signal <v_line>.
+    Found 16-bit register for signal <data_in>.
+    Found finite state machine <FSM_6> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | vid_clk (rising_edge)                          |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit adder for signal <h_count[9]_GND_71_o_add_13_OUT> created at line 113.
+    Found 9-bit adder for signal <v_count[8]_GND_71_o_add_30_OUT> created at line 147.
+    Found 10-bit 4-to-1 multiplexer for signal <h_count[9]_h_count[9]_mux_26_OUT> created at line 120.
+    Found 1-bit 3-to-1 multiplexer for signal <line_ready_GND_71_o_MUX_454_o> created at line 139.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  47 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <mem_video__writer> synthesized.
+
+Synthesizing Unit <write_line>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/src/RAM_VIDEO_BUFFER/write_line.v".
+    Found 23-bit register for signal <external_ram_write_address>.
+    Found 10-bit register for signal <counter>.
+    Found 1-bit register for signal <WRITE>.
+    Found 1-bit register for signal <start_external_ram_write>.
+    Found 10-bit register for signal <line_buffer_read_address>.
+    Found 23-bit adder for signal <external_ram_write_address[22]_GND_72_o_add_7_OUT> created at line 74.
+    Found 10-bit adder for signal <counter[9]_GND_72_o_add_9_OUT> created at line 77.
+    Found 10x9-bit multiplier for signal <PWR_55_o_v_line[8]_MuLt_3_OUT> created at line 58.
+    Found 10-bit comparator greater for signal <counter[9]_PWR_55_o_LessThan_11_o> created at line 79
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  45 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <write_line> synthesized.
+
+Synthesizing Unit <slow_clk_gen>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/slow_clk_gen.v".
+        counter_size = 16
+        reduction_factor = 16'b1111111111111111
+    Found 1-bit register for signal <slow_clk>.
+    Found 16-bit register for signal <counter>.
+    Found 16-bit adder for signal <counter[15]_GND_73_o_add_1_OUT> created at line 35.
+    Found 16-bit comparator greater for signal <n0001> created at line 36
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <slow_clk_gen> synthesized.
+
+Synthesizing Unit <anti_bouncing>.
+    Related source file is "/home/juliano/DASD2014/Tarea1/anti_bouncing.v".
+    Found 1-bit register for signal <q1>.
+    Found 1-bit register for signal <q2>.
+    Found 1-bit register for signal <q3>.
+    Found 1-bit register for signal <aux>.
+    Found 1-bit register for signal <single_pulse_push>.
+    Found 1-bit register for signal <q0>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <anti_bouncing> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 16x4-bit single-port Read Only RAM                    : 2
+ 256x8-bit single-port Read Only RAM                   : 1
+ 4x10-bit single-port Read Only RAM                    : 1
+ 640x16-bit dual-port RAM                              : 2
+# Multipliers                                          : 2
+ 10x9-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 109
+ 1-bit adder                                           : 3
+ 10-bit adder                                          : 6
+ 12-bit adder                                          : 3
+ 16-bit adder                                          : 1
+ 2-bit adder                                           : 7
+ 23-bit adder                                          : 2
+ 3-bit adder                                           : 11
+ 4-bit adder                                           : 36
+ 4-bit subtractor                                      : 3
+ 5-bit adder                                           : 18
+ 5-bit subtractor                                      : 9
+ 7-bit adder                                           : 3
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 5
+# Registers                                            : 267
+ 1-bit register                                        : 173
+ 10-bit register                                       : 20
+ 12-bit register                                       : 3
+ 16-bit register                                       : 7
+ 2-bit register                                        : 7
+ 23-bit register                                       : 2
+ 3-bit register                                        : 5
+ 31-bit register                                       : 2
+ 4-bit register                                        : 15
+ 5-bit register                                        : 10
+ 7-bit register                                        : 3
+ 8-bit register                                        : 11
+ 9-bit register                                        : 9
+# Comparators                                          : 19
+ 10-bit comparator greater                             : 5
+ 16-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 3
+ 4-bit comparator greater                              : 9
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 319
+ 1-bit 2-to-1 multiplexer                              : 252
+ 1-bit 3-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 6
+ 10-bit 4-to-1 multiplexer                             : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 4
+ 23-bit 2-to-1 multiplexer                             : 5
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 23
+ 8-bit 2-to-1 multiplexer                              : 14
+ 9-bit 2-to-1 multiplexer                              : 5
+# Tristates                                            : 17
+ 1-bit tristate buffer                                 : 17
+# FSMs                                                 : 11
+# Xors                                                 : 88
+ 1-bit xor2                                            : 88
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <tmdsclkint_0> in Unit <dvi_tx0> is equivalent to the following 4 FFs/Latches, which will be removed : <tmdsclkint_1> <tmdsclkint_2> <tmdsclkint_3> <tmdsclkint_4> 
+WARNING:Xst:1710 - FF/Latch <din_q_0> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_1> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_2> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_0> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_1> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_0> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_1> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_2> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q_m_reg_0> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q_m_reg_0> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q_m_reg_0> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_1> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_2> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_3> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_4> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_5> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_6> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_7> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_8> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_9> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_10> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_11> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_12> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_13> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_14> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_15> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_16> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_17> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_18> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_19> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_20> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_21> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_22> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_23> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_24> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_25> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_26> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_27> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_28> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_29> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_30> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_1> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_2> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_3> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_4> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_5> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_6> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_7> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_8> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_9> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_10> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_11> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_12> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_13> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_14> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_15> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_16> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_17> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_18> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_19> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_20> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_21> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_22> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_23> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_24> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_25> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_26> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_27> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_28> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_29> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_30> of sequential type is unconnected in block <VLSI_HDMI_MEM_CURSO>.
+
+Synthesizing (advanced) Unit <HDMI_WRAPPER>.
+INFO:Xst:3226 - The RAM <Mram_LineBuffer> will be implemented as a BLOCK RAM, absorbing the following register(s): <Pixel>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 640-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <EXTERNAL_RAM_INTERNAL_CLK> | rise     |
+    |     weA            | connected to signal <Pixel_wen>     | high     |
+    |     addrA          | connected to signal <Pixel_write_addr> |          |
+    |     diA            | connected to signal <Pixel_In>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 640-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <HDMI_Pixel_Clock_25MHz> | rise     |
+    |     addrB          | connected to signal <horizontal_pixel_pointer> |          |
+    |     doB            | connected to signal <Pixel>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <HDMI_WRAPPER> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ROM_8x256>.
+INFO:Xst:3226 - The RAM <Mram_EDID_ROM> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_address>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ROM_8x256> synthesized (advanced).
+
+Synthesizing (advanced) Unit <chnlbond>.
+The following registers are absorbed into counter <wa>: 1 register on signal <wa>.
+The following registers are absorbed into counter <ra>: 1 register on signal <ra>.
+Unit <chnlbond> synthesized (advanced).
+
+Synthesizing (advanced) Unit <convert_30to15_fifo>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_wa_d> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <wa>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <wa_d>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ra_d> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ra>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <ra_d>          |          |
+    -----------------------------------------------------------------------
+Unit <convert_30to15_fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <encode_1>.
+	The following adders/subtractors are grouped into adder tree <Madd_BUS_0010_GND_18_o_add_20_OUT_Madd1> :
+ 	<Madd__n0255> in block <encode_1>, 	<Madd__n0256> in block <encode_1>, 	<Madd__n0258_Madd> in block <encode_1>, 	<Madd_n0206[1:0]> in block <encode_1>, 	<Madd_BUS_0010_GND_18_o_add_20_OUT_Madd> in block <encode_1>.
+	The following adders/subtractors are grouped into adder tree <Madd_BUS_0003_GND_18_o_add_7_OUT_Madd1> :
+ 	<Madd__n0250> in block <encode_1>, 	<Madd__n0251> in block <encode_1>, 	<Madd__n0253_Madd> in block <encode_1>, 	<Madd_n0185[1:0]> in block <encode_1>, 	<Madd_BUS_0003_GND_18_o_add_7_OUT_Madd> in block <encode_1>.
+INFO:Xst:3231 - The small RAM <Mram_c1_final_PWR_18_o_wide_mux_54_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 10-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(c1_reg,c0_reg)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <encode_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <encode_2>.
+	The following adders/subtractors are grouped into adder tree <Madd_BUS_0010_GND_19_o_add_20_OUT_Madd1> :
+ 	<Madd__n0251> in block <encode_2>, 	<Madd__n0252> in block <encode_2>, 	<Madd__n0254_Madd> in block <encode_2>, 	<Madd_n0202[1:0]> in block <encode_2>, 	<Madd_BUS_0010_GND_19_o_add_20_OUT_Madd> in block <encode_2>.
+	The following adders/subtractors are grouped into adder tree <Madd_BUS_0003_GND_19_o_add_7_OUT_Madd1> :
+ 	<Madd__n0246> in block <encode_2>, 	<Madd__n0247> in block <encode_2>, 	<Madd__n0249_Madd> in block <encode_2>, 	<Madd_n0181[1:0]> in block <encode_2>, 	<Madd_BUS_0003_GND_19_o_add_7_OUT_Madd> in block <encode_2>.
+Unit <encode_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <h_sync__v_sync__gen>.
+The following registers are absorbed into counter <h_sync_per_counter>: 1 register on signal <h_sync_per_counter>.
+The following registers are absorbed into counter <v_count_req>: 1 register on signal <v_count_req>.
+The following registers are absorbed into counter <v_sync_per_counter>: 1 register on signal <v_sync_per_counter>.
+The following registers are absorbed into counter <h_count_req>: 1 register on signal <h_count_req>.
+Unit <h_sync__v_sync__gen> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mem_video__writer>.
+INFO:Xst:3226 - The RAM <Mram_line_buffer> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_in>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 640-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <vid_clk>       | rise     |
+    |     weA            | connected to signal <data_valid>    | high     |
+    |     addrA          | connected to signal <h_count>       |          |
+    |     diA            | connected to signal <DATA_in>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 640-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <mem_clk>       | rise     |
+    |     addrB          | connected to signal <data_in__addr> |          |
+    |     doB            | connected to signal <data_in>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <mem_video__writer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <phsaligner>.
+The following registers are absorbed into counter <ctkn_srh_timer>: 1 register on signal <ctkn_srh_timer>.
+The following registers are absorbed into counter <ctkn_counter>: 1 register on signal <ctkn_counter>.
+Unit <phsaligner> synthesized (advanced).
+
+Synthesizing (advanced) Unit <read_line>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <read_line> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serdes_1_to_5_diff_data>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <serdes_1_to_5_diff_data> synthesized (advanced).
+
+Synthesizing (advanced) Unit <slow_clk_gen>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <slow_clk_gen> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top>.
+The following registers are absorbed into counter <curr_YRGB>: 1 register on signal <curr_YRGB>.
+Unit <top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <write_line>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <write_line> synthesized (advanced).
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_1> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_2> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_3> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_4> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_5> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_6> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_7> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_8> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_9> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_10> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_11> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_12> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_13> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_14> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_15> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_16> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_17> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_18> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_19> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_20> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_21> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_22> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_23> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_24> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_25> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_26> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_27> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_28> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_29> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_vsync__lat_pip_30> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_1> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_2> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_3> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_4> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_5> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_6> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_7> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_8> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_9> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_10> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_11> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_12> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_13> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_14> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_15> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_16> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_17> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_18> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_19> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_20> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_21> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_22> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_23> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_24> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_25> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_26> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_27> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_28> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_29> of sequential type is unconnected in block <HDMI_WRAPPER>.
+WARNING:Xst:2677 - Node <rx_active__lat_pip_30> of sequential type is unconnected in block <HDMI_WRAPPER>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 16x4-bit single-port distributed Read Only RAM        : 2
+ 256x8-bit single-port block Read Only RAM             : 1
+ 4x10-bit single-port distributed Read Only RAM        : 1
+ 640x16-bit dual-port block RAM                        : 2
+# Multipliers                                          : 2
+ 10x9-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 45
+ 1-bit adder                                           : 3
+ 10-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 23-bit adder                                          : 2
+ 3-bit adder                                           : 5
+ 4-bit subtractor                                      : 3
+ 5-bit adder                                           : 18
+ 5-bit subtractor                                      : 9
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 1
+# Adder Trees                                          : 6
+ 4-bit / 6-inputs adder tree                           : 6
+# Counters                                             : 23
+ 10-bit up counter                                     : 5
+ 12-bit up counter                                     : 3
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 6
+ 7-bit up counter                                      : 3
+ 9-bit up counter                                      : 4
+# Registers                                            : 730
+ Flip-Flops                                            : 730
+# Comparators                                          : 19
+ 10-bit comparator greater                             : 5
+ 16-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 3
+ 4-bit comparator greater                              : 9
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 316
+ 1-bit 2-to-1 multiplexer                              : 252
+ 1-bit 3-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 6
+ 10-bit 4-to-1 multiplexer                             : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 4
+ 23-bit 2-to-1 multiplexer                             : 5
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 23
+ 8-bit 2-to-1 multiplexer                              : 14
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 11
+# Xors                                                 : 88
+ 1-bit xor2                                            : 88
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <tmdsclkint_0> in Unit <dvi_encoder_top> is equivalent to the following 4 FFs/Latches, which will be removed : <tmdsclkint_1> <tmdsclkint_2> <tmdsclkint_3> <tmdsclkint_4> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/mem_video/FSM_6> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_EDID_protocol_ctrl__1/FSM_0> on signal <state[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 100   | 001
+ 011   | 010
+ 010   | 011
+ 001   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/FSM_1> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 11    | 01
+ 10    | 11
+ 01    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/PSDRAM/FSM_4> on signal <Estados1[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00000 | 00000
+ 01000 | 01000
+ 01101 | 01101
+ 00001 | 00001
+ 00010 | 00010
+ 00011 | 00011
+ 00100 | 00100
+ 00110 | unreached
+ 00111 | unreached
+ 01001 | 01001
+ 01010 | 01010
+ 01011 | 01011
+ 01100 | 01100
+ 01110 | 01110
+ 01111 | 01111
+ 10000 | 10000
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/mem_address_scheduler/FSM_5> on signal <state[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 011   | 001
+ 001   | 010
+ 010   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_b/des_0/FSM_2> on signal <state[1:4]> with user encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_g/des_0/FSM_2> on signal <state[1:4]> with user encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/des_0/FSM_2> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 0001  | 0001
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_b/phsalgn_0/FSM_3> on signal <cstate[1:6]> with user encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_g/phsalgn_0/FSM_3> on signal <cstate[1:6]> with user encoding.
+Optimizing FSM <VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/phsalgn_0/FSM_3> on signal <cstate[1:6]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ 000001 | 000001
+ 000010 | 000010
+ 000100 | 000100
+ 001000 | 001000
+ 010000 | 010000
+ 100000 | 100000
+--------------------
+WARNING:Xst:1710 - FF/Latch <external_ram_write_address_0> (without init value) has a constant value of 0 in block <write_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_write_address_1> (without init value) has a constant value of 0 in block <write_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_write_address_2> (without init value) has a constant value of 0 in block <write_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_write_address_3> (without init value) has a constant value of 0 in block <write_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_write_address_4> (without init value) has a constant value of 0 in block <write_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_write_address_5> (without init value) has a constant value of 0 in block <write_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <external_ram_read_address_0> (without init value) has a constant value of 0 in block <read_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_read_address_1> (without init value) has a constant value of 0 in block <read_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_read_address_2> (without init value) has a constant value of 0 in block <read_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_read_address_3> (without init value) has a constant value of 0 in block <read_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_read_address_4> (without init value) has a constant value of 0 in block <read_line>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <external_ram_read_address_5> (without init value) has a constant value of 0 in block <read_line>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance PLL_OSERDES in unit PLL_OSERDES of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:1901 - Instance PLL_ISERDES in unit PLL_ISERDES of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <n1q_m_0> in Unit <encode_1> is equivalent to the following FF/Latch, which will be removed : <n0q_m_0> 
+INFO:Xst:2261 - The FF/Latch <n1q_m_0> in Unit <encode_2> is equivalent to the following FF/Latch, which will be removed : <n0q_m_0> 
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <n1q_m_0> is unconnected in block <encode_1>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <n1q_m_0> is unconnected in block <encode_2>.
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <encode_1>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <dvi_tx_fixed_res> ...
+
+Optimizing unit <DRAM16XN_1> ...
+
+Optimizing unit <serdes_n_to_1> ...
+
+Optimizing unit <one_shot> ...
+
+Optimizing unit <System_Clock_Generator> ...
+
+Optimizing unit <EDID_I2C> ...
+
+Optimizing unit <ROM_8x256> ...
+
+Optimizing unit <DRAM16XN_2> ...
+
+Optimizing unit <top> ...
+
+Optimizing unit <HDMI_WRAPPER> ...
+
+Optimizing unit <dvi_encoder_top> ...
+
+Optimizing unit <encode_1> ...
+
+Optimizing unit <encode_2> ...
+WARNING:Xst:1293 - FF/Latch <cnt_0> has a constant value of 0 in block <encode_2>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <convert_30to15_fifo> ...
+
+Optimizing unit <h_sync__v_sync__gen> ...
+
+Optimizing unit <mem_video__writer> ...
+
+Optimizing unit <write_line> ...
+
+Optimizing unit <I2C_EDID_protocol_ctrl> ...
+
+Optimizing unit <I2C_BYTE_TX_RX> ...
+
+Optimizing unit <PSDRAMDriver> ...
+
+Optimizing unit <read_line> ...
+
+Optimizing unit <scheduler> ...
+
+Optimizing unit <dvi_decoder> ...
+
+Optimizing unit <decode> ...
+
+Optimizing unit <serdes_1_to_5_diff_data> ...
+
+Optimizing unit <phsaligner> ...
+
+Optimizing unit <chnlbond> ...
+
+Optimizing unit <anti_bouncing> ...
+
+Optimizing unit <slow_clk_gen> ...
+WARNING:Xst:1710 - FF/Latch <din_q_0> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_1> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_2> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n1d_3> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <q_m_reg_2> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_0> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_1> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_2> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n1d_3> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <q_m_reg_2> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_0> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_1> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n1d_3> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q_m_reg_0> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q_m_reg_0> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q_m_reg_0> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <StartSendBuff> of sequential type is unconnected in block <PSDRAM>.
+WARNING:Xst:2677 - Node <RAM_BUSY> of sequential type is unconnected in block <mem_video_reader>.
+WARNING:Xst:2677 - Node <c0> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <c1> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <de> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_0> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_1> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_2> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_3> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_4> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_5> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_6> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_7> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_8> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdout_9> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <dec_r>.
+WARNING:Xst:2677 - Node <sdata_9> of sequential type is unconnected in block <cbnd>.
+WARNING:Xst:2677 - Node <c0> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <c1> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <de> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_0> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_1> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_2> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_3> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_4> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_5> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_6> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_7> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_8> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdout_9> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <dec_g>.
+WARNING:Xst:2677 - Node <sdata_9> of sequential type is unconnected in block <cbnd>.
+WARNING:Xst:2677 - Node <c0> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_0> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_1> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_2> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_3> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_4> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_5> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_6> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_7> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_8> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <sdout_9> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <dec_b>.
+WARNING:Xst:2677 - Node <n1d_0> of sequential type is unconnected in block <encb>.
+WARNING:Xst:2677 - Node <n1d_1> of sequential type is unconnected in block <encb>.
+WARNING:Xst:2677 - Node <n1d_0> of sequential type is unconnected in block <encr>.
+WARNING:Xst:2677 - Node <n1d_1> of sequential type is unconnected in block <encr>.
+WARNING:Xst:2677 - Node <n1d_0> of sequential type is unconnected in block <encg>.
+WARNING:Xst:2677 - Node <n1d_1> of sequential type is unconnected in block <encg>.
+WARNING:Xst:1710 - FF/Latch <n1q_m_3> (without init value) has a constant value of 0 in block <encb>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n1q_m_3> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n1q_m_3> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DataCounter_6> has a constant value of 0 in block <PSDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DataCounter_7> has a constant value of 0 in block <PSDRAM>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <dout_2> in Unit <encr> is equivalent to the following FF/Latch, which will be removed : <dout_9> 
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 2.
+
+Final Macro Processing ...
+
+Processing Unit <encb> :
+	Found 2-bit shift register for signal <de_reg>.
+	Found 2-bit shift register for signal <c0_reg>.
+	Found 2-bit shift register for signal <c1_reg>.
+Unit <encb> processed.
+
+Processing Unit <encg> :
+	Found 2-bit shift register for signal <de_reg>.
+Unit <encg> processed.
+
+Processing Unit <encr> :
+	Found 2-bit shift register for signal <de_reg>.
+Unit <encr> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 845
+ Flip-Flops                                            : 845
+# Shift Registers                                      : 5
+ 2-bit shift register                                  : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1513
+#      GND                         : 25
+#      INV                         : 47
+#      LUT1                        : 150
+#      LUT2                        : 113
+#      LUT3                        : 165
+#      LUT4                        : 133
+#      LUT5                        : 152
+#      LUT6                        : 294
+#      MUXCY                       : 190
+#      MUXF7                       : 17
+#      VCC                         : 21
+#      XORCY                       : 206
+# FlipFlops/Latches                : 850
+#      FD                          : 283
+#      FD_1                        : 41
+#      FDC                         : 117
+#      FDCE                        : 12
+#      FDE                         : 176
+#      FDE_1                       : 16
+#      FDP                         : 9
+#      FDPE                        : 3
+#      FDR                         : 112
+#      FDRE                        : 80
+#      FDS                         : 1
+# RAMS                             : 63
+#      RAM16X1D                    : 60
+#      RAMB16BWER                  : 2
+#      RAMB8BWER                   : 1
+# Shift Registers                  : 5
+#      SRLC16E                     : 5
+# Clock Buffers                    : 6
+#      BUFG                        : 6
+# IO Buffers                       : 64
+#      BUFIO2                      : 1
+#      IBUF                        : 3
+#      IBUFDS                      : 4
+#      IBUFG                       : 1
+#      IOBUF                       : 17
+#      OBUF                        : 34
+#      OBUFDS                      : 4
+# DCMs                             : 1
+#      DCM_CLKGEN                  : 1
+# Others                           : 24
+#      BUFPLL                      : 2
+#      IODELAY2                    : 6
+#      ISERDES2                    : 6
+#      OSERDES2                    : 8
+#      PLL_ADV                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             850  out of  18224     4%  
+ Number of Slice LUTs:                 1179  out of   9112    12%  
+    Number used as Logic:              1054  out of   9112    11%  
+    Number used as Memory:              125  out of   2176     5%  
+       Number used as RAM:              120
+       Number used as SRL:                5
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1453
+   Number with an unused Flip Flop:     603  out of   1453    41%  
+   Number with an unused LUT:           274  out of   1453    18%  
+   Number of fully used LUT-FF pairs:   576  out of   1453    39%  
+   Number of unique control sets:        97
+
+IO Utilization: 
+ Number of IOs:                          85
+ Number of bonded IOBs:                  62  out of    232    26%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                3  out of     32     9%  
+    Number using Block RAM only:          3
+ Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
+ Number of PLL_ADVs:                      2  out of      2   100%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                         | Clock buffer(FF name)  | Load  |
+---------------------------------------------------------------------+------------------------+-------+
+VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1                | BUFG                   | 293   |
+ab/single_pulse_push                                                 | NONE(curr_YRGB_0)      | 2     |
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT1| BUFG                   | 189   |
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx              | BUFG                   | 217   |
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2| BUFG                   | 55    |
+VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2                | BUFG                   | 141   |
+scg/slow_clk                                                         | NONE(ab/q0)            | 4     |
+clk                                                                  | IBUFG                  | 19    |
+---------------------------------------------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.332ns (Maximum Frequency: 136.398MHz)
+   Minimum input arrival time before clock: 4.302ns
+   Maximum output required time after clock: 5.908ns
+   Maximum combinational path delay: 3.150ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1'
+  Clock period: 4.916ns (frequency: 203.401MHz)
+  Total number of paths / destination ports: 2148 / 713
+-------------------------------------------------------------------------
+Delay:               4.916ns (Levels of Logic = 4)
+  Source:            VLSI_HDMI_MEM_CURSO/mem_video/h_count_0 (FF)
+  Destination:       VLSI_HDMI_MEM_CURSO/mem_video/state_FSM_FFd2 (FF)
+  Source Clock:      VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1 rising
+  Destination Clock: VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1 rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/mem_video/h_count_0 to VLSI_HDMI_MEM_CURSO/mem_video/state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.447   1.077  h_count_0 (h_count_0)
+     LUT5:I1->O            3   0.203   0.879  Mmux_h_count[9]_h_count[9]_mux_26_OUT611 (Mmux_h_count[9]_h_count[9]_mux_26_OUT61)
+     LUT3:I0->O            4   0.205   0.912  Mmux_h_count[9]_h_count[9]_mux_26_OUT1021 (Mmux_h_count[9]_h_count[9]_mux_26_OUT102)
+     LUT5:I2->O            1   0.205   0.684  state_FSM_FFd2-In2 (state_FSM_FFd2-In2)
+     LUT6:I4->O            1   0.203   0.000  state_FSM_FFd2-In3 (state_FSM_FFd2-In)
+     FD:D                      0.102          state_FSM_FFd2
+    ----------------------------------------
+    Total                      4.916ns (1.365ns logic, 3.551ns route)
+                                       (27.8% logic, 72.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ab/single_pulse_push'
+  Clock period: 2.016ns (frequency: 495.933MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.016ns (Levels of Logic = 1)
+  Source:            curr_YRGB_0 (FF)
+  Destination:       curr_YRGB_0 (FF)
+  Source Clock:      ab/single_pulse_push rising
+  Destination Clock: ab/single_pulse_push rising
+
+  Data Path: curr_YRGB_0 to curr_YRGB_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.683  curr_YRGB_0 (curr_YRGB_0)
+     INV:I->O              1   0.206   0.579  Mcount_curr_YRGB_xor<0>11_INV_0 (Result<0>)
+     FD:D                      0.102          curr_YRGB_0
+    ----------------------------------------
+    Total                      2.016ns (0.755ns logic, 1.261ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT1'
+  Clock period: 5.858ns (frequency: 170.698MHz)
+  Total number of paths / destination ports: 3652 / 390
+-------------------------------------------------------------------------
+Delay:               5.858ns (Levels of Logic = 5)
+  Source:            VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_3 (FF)
+  Destination:       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2 (FF)
+  Source Clock:      VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT1 rising
+  Destination Clock: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT1 rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/din_q_3 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/encg/n0q_m_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.447   1.031  din_q_3 (din_q_3)
+     LUT3:I0->O            5   0.205   0.715  Mmux_q_m<4>11 (q_m<4>)
+     LUT5:I4->O            6   0.205   0.849  Mmux_q_m<7>11 (q_m<7>)
+     LUT6:I4->O            6   0.203   0.973  ADDERTREE_INTERNAL_Madd9_lut<0>11 (ADDERTREE_INTERNAL_Madd9_lut<0>1)
+     LUT4:I1->O            2   0.205   0.721  Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>161 (Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>16)
+     LUT6:I4->O            1   0.203   0.000  Msub_PWR_21_o_BUS_0017_sub_29_OUT_xor<2>14 (PWR_21_o_BUS_0017_sub_29_OUT<2>)
+     FD:D                      0.102          n0q_m_2
+    ----------------------------------------
+    Total                      5.858ns (1.570ns logic, 4.288ns route)
+                                       (26.8% logic, 73.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx'
+  Clock period: 7.332ns (frequency: 136.398MHz)
+  Total number of paths / destination ports: 2508 / 381
+-------------------------------------------------------------------------
+Delay:               3.666ns (Levels of Logic = 5)
+  Source:            VLSI_HDMI_MEM_CURSO/mem_address_scheduler/mem_mux (FF)
+  Destination:       VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5 (FF)
+  Source Clock:      VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx rising
+  Destination Clock: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx falling
+
+  Data Path: VLSI_HDMI_MEM_CURSO/mem_address_scheduler/mem_mux to VLSI_HDMI_MEM_CURSO/PSDRAM/Estados1_FSM_FFd5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.447   1.093  mem_mux (mem_mux)
+     LUT2:I1->O            3   0.205   0.651  external_ram_start_write1 (external_ram_start_write)
+     end scope: 'VLSI_HDMI_MEM_CURSO/mem_address_scheduler:external_ram_start_write'
+     begin scope: 'VLSI_HDMI_MEM_CURSO/PSDRAM:StartWrite'
+     LUT3:I2->O            2   0.205   0.617  Estados1_FSM_FFd5-In5_SW0 (N29)
+     LUT6:I5->O            1   0.205   0.000  Estados1_FSM_FFd5-In5_G (N42)
+     MUXF7:I1->O           1   0.140   0.000  Estados1_FSM_FFd5-In5 (Estados1_FSM_FFd5-In)
+     FD_1:D                    0.102          Estados1_FSM_FFd5
+    ----------------------------------------
+    Total                      3.666ns (1.304ns logic, 2.362ns route)
+                                       (35.6% logic, 64.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2'
+  Clock period: 2.881ns (frequency: 347.120MHz)
+  Total number of paths / destination ports: 219 / 93
+-------------------------------------------------------------------------
+Delay:               2.881ns (Levels of Logic = 1)
+  Source:            VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen (FF)
+  Destination:       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen (FF)
+  Source Clock:      VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2 rising
+  Destination Clock: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2 rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/pixel2x/sync_gen
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             50   0.447   1.547  sync_gen (sync)
+     INV:I->O              1   0.206   0.579  sync_INV_46_o1_INV_0 (sync_INV_46_o)
+     FDR:D                     0.102          sync_gen
+    ----------------------------------------
+    Total                      2.881ns (0.755ns logic, 2.126ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2'
+  Clock period: 5.028ns (frequency: 198.876MHz)
+  Total number of paths / destination ports: 1357 / 141
+-------------------------------------------------------------------------
+Delay:               5.028ns (Levels of Logic = 3)
+  Source:            VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_g/des_0/pdcounter_4 (FF)
+  Destination:       VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_g/des_0/pdcounter_0 (FF)
+  Source Clock:      VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2 rising
+  Destination Clock: VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2 rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_g/des_0/pdcounter_4 to VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_g/des_0/pdcounter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.447   1.118  pdcounter_4 (pdcounter_4)
+     LUT5:I0->O            6   0.203   0.992  pdcounter[4]_GND_38_o_equal_50_o<4>1 (pdcounter[4]_GND_38_o_equal_50_o)
+     LUT6:I2->O            1   0.203   0.827  _n0256_inv1 (_n0256_inv1)
+     LUT4:I0->O            5   0.203   0.714  _n0256_inv2 (_n0256_inv)
+     FDCE:CE                   0.322          pdcounter_0
+    ----------------------------------------
+    Total                      5.028ns (1.378ns logic, 3.650ns route)
+                                       (27.4% logic, 72.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'scg/slow_clk'
+  Clock period: 1.199ns (frequency: 833.855MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.199ns (Levels of Logic = 0)
+  Source:            ab/q0 (FF)
+  Destination:       ab/q1 (FF)
+  Source Clock:      scg/slow_clk rising
+  Destination Clock: scg/slow_clk rising
+
+  Data Path: ab/q0 to ab/q1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  q0 (q0)
+     FD:D                      0.102          q1
+    ----------------------------------------
+    Total                      1.199ns (0.549ns logic, 0.650ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.562ns (frequency: 179.799MHz)
+  Total number of paths / destination ports: 2450 / 34
+-------------------------------------------------------------------------
+Delay:               5.562ns (Levels of Logic = 15)
+  Source:            scg/counter_0 (FF)
+  Destination:       scg/counter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: scg/counter_0 to scg/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  counter_0 (counter_0)
+     INV:I->O              1   0.206   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_lut<0>_INV_0 (Madd_counter[15]_GND_73_o_add_1_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<0> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<1> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<2> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<3> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<4> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<5> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<6> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<7> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<8> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<9> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_counter[15]_GND_73_o_add_1_OUT_cy<10> (Madd_counter[15]_GND_73_o_add_1_OUT_cy<10>)
+     XORCY:CI->O           1   0.180   0.944  Madd_counter[15]_GND_73_o_add_1_OUT_xor<11> (counter[15]_GND_73_o_add_1_OUT<11>)
+     LUT6:I0->O            1   0.203   0.944  n0001_inv1 (n0001_inv1)
+     LUT6:I0->O           17   0.203   1.027  n0001_inv3 (n0001_inv)
+     FDR:R                     0.430          counter_0
+    ----------------------------------------
+    Total                      5.562ns (2.031ns logic, 3.531ns route)
+                                       (36.5% logic, 63.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              3.801ns (Levels of Logic = 6)
+  Source:            EDID_IN_SCL (PAD)
+  Destination:       VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/SDA_PIN_driver (FF)
+  Destination Clock: VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx rising
+
+  Data Path: EDID_IN_SCL to VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1/SDA_PIN_driver
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.222   1.130  EDID_IN_SCL_IBUF (EDID_IN_SCL_IBUF)
+     begin scope: 'VLSI_HDMI_MEM_CURSO:EDID_IN_SCL'
+     begin scope: 'VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI:SCL_PIN'
+     begin scope: 'VLSI_HDMI_MEM_CURSO/IDENTIFICADOR_MONITOR_VLSI/I2C_BYTE_TX_RX__1:SCL_PIN'
+     LUT4:I0->O            1   0.203   0.000  _n0339_inv_F (N10)
+     MUXF7:I0->O           1   0.131   0.808  _n0339_inv (_n0339_inv)
+     LUT3:I0->O            1   0.205   0.000  SDA_PIN_driver_rstpot (SDA_PIN_driver_rstpot)
+     FDS:D                     0.102          SDA_PIN_driver
+    ----------------------------------------
+    Total                      3.801ns (1.863ns logic, 1.938ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2'
+  Total number of paths / destination ports: 132 / 126
+-------------------------------------------------------------------------
+Offset:              4.302ns (Levels of Logic = 4)
+  Source:            VLSI_HDMI_MEM_CURSO/dvi_decoder_1/ioclk_buf:LOCK (PAD)
+  Destination:       VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/des_0/rst_data (FF)
+  Destination Clock: VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2 rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/dvi_decoder_1/ioclk_buf:LOCK to VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/des_0/rst_data
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BUFPLL:LOCK            1   0.000   0.579  ioclk_buf (bufpll_lock)
+     INV:I->O            132   0.206   2.066  reset1_INV_0 (reset)
+     begin scope: 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r:reset'
+     begin scope: 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/des_0:reset'
+     LUT6:I4->O            1   0.203   0.944  rst_data_rstpot (rst_data_rstpot)
+     LUT6:I0->O            1   0.203   0.000  rst_data_rstpot1 (rst_data_rstpot1)
+     FD:D                      0.102          rst_data
+    ----------------------------------------
+    Total                      4.302ns (0.714ns logic, 3.588ns route)
+                                       (16.6% logic, 83.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1'
+  Total number of paths / destination ports: 45 / 45
+-------------------------------------------------------------------------
+Offset:              3.175ns (Levels of Logic = 2)
+  Source:            VLSI_HDMI_MEM_CURSO/dvi_decoder_1/ioclk_buf:LOCK (PAD)
+  Destination:       VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/phsalgn_0/bitslip_cnt_0 (FF)
+  Destination Clock: VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1 rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/dvi_decoder_1/ioclk_buf:LOCK to VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/phsalgn_0/bitslip_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BUFPLL:LOCK            1   0.000   0.579  ioclk_buf (bufpll_lock)
+     INV:I->O            132   0.206   1.961  reset1_INV_0 (reset)
+     begin scope: 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r:reset'
+     begin scope: 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/phsalgn_0:rst'
+     FDC:CLR                   0.430          bitslip_cnt_0
+    ----------------------------------------
+    Total                      3.175ns (0.636ns logic, 2.539ns route)
+                                       (20.0% logic, 80.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'scg/slow_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 2)
+  Source:            btn (PAD)
+  Destination:       ab/q0 (FF)
+  Destination Clock: scg/slow_clk rising
+
+  Data Path: btn to ab/q0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  btn_IBUF (btn_IBUF)
+     begin scope: 'ab:buton'
+     FD:D                      0.102          q0
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ab/single_pulse_push'
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Offset:              4.587ns (Levels of Logic = 2)
+  Source:            curr_YRGB_0 (FF)
+  Destination:       Led<0> (PAD)
+  Source Clock:      ab/single_pulse_push rising
+
+  Data Path: curr_YRGB_0 to Led<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.788  curr_YRGB_0 (curr_YRGB_0)
+     LUT2:I0->O            1   0.203   0.579  Led<0>11 (Led_0_OBUF)
+     OBUF:I->O                 2.571          Led_0_OBUF (Led<0>)
+    ----------------------------------------
+    Total                      4.587ns (3.221ns logic, 1.366ns route)
+                                       (70.2% logic, 29.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx'
+  Total number of paths / destination ports: 112 / 44
+-------------------------------------------------------------------------
+Offset:              5.908ns (Levels of Logic = 5)
+  Source:            VLSI_HDMI_MEM_CURSO/mem_address_scheduler/mem_mux (FF)
+  Destination:       MemAdr_ext<22> (PAD)
+  Source Clock:      VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/mem_address_scheduler/mem_mux to MemAdr_ext<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.447   1.321  mem_mux (mem_mux)
+     LUT3:I0->O            1   0.205   0.580  Mmux_address_in231 (address_in<9>)
+     end scope: 'VLSI_HDMI_MEM_CURSO/mem_address_scheduler:address_in<9>'
+     begin scope: 'VLSI_HDMI_MEM_CURSO/PSDRAM:Address<9>'
+     LUT2:I1->O            1   0.205   0.579  Mmux_ADDR11 (ADDR<10>)
+     end scope: 'VLSI_HDMI_MEM_CURSO/PSDRAM:ADDR<10>'
+     end scope: 'VLSI_HDMI_MEM_CURSO:MemAdr_ext<9>'
+     OBUF:I->O                 2.571          MemAdr_ext_9_OBUF (MemAdr_ext<9>)
+    ----------------------------------------
+    Total                      5.908ns (3.428ns logic, 2.480ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              1.161ns (Levels of Logic = 1)
+  Source:            VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0 (FF)
+  Destination:       VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m:D1 (PAD)
+  Source Clock:      VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2 rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/tmdsclkint_0 to VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m:D1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.447   0.714  tmdsclkint_0 (tmdsclkint_0)
+     begin scope: 'VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout:datain<4>'
+    OSERDES2:D1                0.000          oserdes_m
+    ----------------------------------------
+    Total                      1.161ns (0.447ns logic, 0.714ns route)
+                                       (38.5% logic, 61.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              1.097ns (Levels of Logic = 0)
+  Source:            VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/des_0/inc_data_int (FF)
+  Destination:       VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/des_0/iodelay_m:INC (PAD)
+  Source Clock:      VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2 rising
+
+  Data Path: VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/des_0/inc_data_int to VLSI_HDMI_MEM_CURSO/dvi_decoder_1/dec_r/des_0/iodelay_m:INC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  inc_data_int (inc_data_int)
+    IODELAY2:INC               0.000          iodelay_m
+    ----------------------------------------
+    Total                      1.097ns (0.447ns logic, 0.650ns route)
+                                       (40.7% logic, 59.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 92 / 85
+-------------------------------------------------------------------------
+Delay:               3.150ns (Levels of Logic = 3)
+  Source:            VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m:OQ (PAD)
+  Destination:       TMDS_OUT<3> (PAD)
+
+  Data Path: VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout/oserdes_m:OQ to TMDS_OUT<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    OSERDES2:OQ            1   0.000   0.000  oserdes_m (iob_data_out)
+     end scope: 'VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0/clkout:iob_data_out'
+     OBUFDS:I->O               2.571          TMDS3 (TMDS<3>)
+     end scope: 'VLSI_HDMI_MEM_CURSO/dvi_main_tx_0/dvi_tx0:TMDS<3>'
+     end scope: 'VLSI_HDMI_MEM_CURSO/dvi_main_tx_0:TMDS_OUT<3>'
+     end scope: 'VLSI_HDMI_MEM_CURSO:TMDS_OUT<3>'
+    ----------------------------------------
+    Total                      3.150ns (3.150ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT1
+---------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------------+---------+---------+---------+---------+
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT1|    5.858|         |         |         |
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2|    1.767|         |         |         |
+---------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2
+---------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------------+---------+---------+---------+---------+
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT1|    1.671|         |         |         |
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT2|    2.881|         |         |         |
+---------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx
+---------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------------------+---------+---------+---------+---------+
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/PLL_OSERDES/CLKOUT1|    3.149|         |         |         |
+VLSI_HDMI_MEM_CURSO/HDMI_AND_MEMORY_CLOCK_MANAGER/clkfx              |    4.540|    2.496|    4.232|         |
+VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1                |    3.021|         |         |         |
+---------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1
+-----------------------------------------------------+---------+---------+---------+---------+
+                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------+---------+---------+---------+---------+
+VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1|    4.916|         |         |         |
+VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2|    2.634|         |         |         |
+-----------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2
+-----------------------------------------------------+---------+---------+---------+---------+
+                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------+---------+---------+---------+---------+
+VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT1|    1.405|         |         |         |
+VLSI_HDMI_MEM_CURSO/dvi_decoder_1/PLL_ISERDES/CLKOUT2|    5.028|         |         |         |
+-----------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ab/single_pulse_push
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+ab/single_pulse_push|    2.016|         |         |         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.562|         |         |         |
+scg/slow_clk   |    1.650|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock scg/slow_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+scg/slow_clk   |    1.199|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.10 secs
+ 
+--> 
+
+
+Total memory usage is 136088 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  248 (   0 filtered)
+Number of infos    :   52 (   0 filtered)
+

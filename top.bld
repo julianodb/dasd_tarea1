@@ -1,0 +1,182 @@
+Release 14.7 ngdbuild P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line:
+/media/juliano/A2586A51586A246F/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/ngdbuil
+d -intstyle ise -dd _ngo -nt timestamp -uc main.ucf -p xc6slx16-csg324-3 top.ngc
+top.ngd
+
+Reading NGO file "/home/juliano/DASD2014/Tarea1/top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "main.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into DCM_CLKGEN instance dcm_clkgen_inst. The
+   following new TNM groups and period specifications were generated at the
+   DCM_CLKGEN output(s): 
+   CLKFX: <TIMESPEC TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx =
+   PERIOD "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_clkfx"
+   TS_sys_clk_pin * 0.8 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT1: <TIMESPEC
+   TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1 = PERIOD
+   "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk1" TS_sys_clk_pin *
+   0.25 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC
+   TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk0 = PERIOD
+   "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk0" TS_sys_clk_pin *
+   2.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC
+   TS_VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2 = PERIOD
+   "VLSI_HDMI_MEM_CURSO_HDMI_AND_MEMORY_CLOCK_MANAGER_pllclk2" TS_sys_clk_pin *
+   0.5 HIGH 50%>
+
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'N19' has no driver
+WARNING:NgdBuild:452 - logical net 'N20' has no driver
+WARNING:NgdBuild:452 - logical net 'N21' has no driver
+WARNING:NgdBuild:452 - logical net 'N22' has no driver
+WARNING:NgdBuild:452 - logical net 'N23' has no driver
+WARNING:NgdBuild:452 - logical net 'N24' has no driver
+WARNING:NgdBuild:452 - logical net 'N25' has no driver
+WARNING:NgdBuild:452 - logical net 'N26' has no driver
+WARNING:NgdBuild:452 - logical net 'N27' has no driver
+WARNING:NgdBuild:452 - logical net 'N28' has no driver
+WARNING:NgdBuild:452 - logical net 'N29' has no driver
+WARNING:NgdBuild:452 - logical net 'N30' has no driver
+WARNING:NgdBuild:452 - logical net 'N31' has no driver
+WARNING:NgdBuild:452 - logical net 'N32' has no driver
+WARNING:NgdBuild:452 - logical net 'N33' has no driver
+WARNING:NgdBuild:452 - logical net 'N34' has no driver
+WARNING:NgdBuild:452 - logical net 'N35' has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/address_in<5>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/address_in<4>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/address_in<3>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/address_in<2>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/address_in<1>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/address_in<0>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/R_capture<2>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/R_capture<1>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/R_capture<0>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/G_capture<1>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/G_capture<0>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/B_capture<2>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/B_capture<1>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/B_capture<0>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<19>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<18>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<17>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<16>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<15>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<4>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<3>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<2>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<1>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<0>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/hsync' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<24>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<23>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<22>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<21>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<20>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<9>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<8>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<7>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<6>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<5>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<29>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<28>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<27>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<26>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<25>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<14>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<13>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<12>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<11>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'VLSI_HDMI_MEM_CURSO/dvi_decoder_1/sdout<10>'
+   has no driver
+WARNING:NgdBuild:478 - clock net VLSI_HDMI_MEM_CURSO/dvi_decoder_1/tmdsclk with
+   clock driver VLSI_HDMI_MEM_CURSO/dvi_decoder_1/tmdsclk_bufg drives no clock
+   pins
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  63
+
+Total memory usage is 114644 kilobytes
+
+Writing NGD file "top.ngd" ...
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   5 sec
+
+Writing NGDBUILD log file "top.bld"...
